@@ -1467,3 +1467,306 @@ ok: 100 / 100
 98 Mermaid CLI ok unknown buildable_with_effort
 99 YouTube Transcript ok self_serve_free buildable_with_effort
 100 Grain ok self_serve_free ready_now
+ok: 100 / 100
+1 Salesforce ok self_serve_free buildable_with_effort
+2 HubSpot ok self_serve_free ready_now
+3 Pipedrive ok self_serve_trial buildable_with_effort
+4 Attio ok self_serve_trial ready_now
+5 Twenty ok self_serve_free ready_now
+6 Podio ok self_serve_free ready_now
+7 Zoho CRM ok self_serve_free ready_now
+8 Close ok paid_plan buildable_with_effort
+9 Copper ok self_serve_trial buildable_with_effort
+10 DealCloud ok self_serve_trial ready_now
+11 Zendesk ok self_serve_trial ready_now
+12 Intercom ok self_serve_free ready_now
+13 Freshdesk ok self_serve_free ready_now
+14 Front ok self_serve_free buildable_with_effort
+15 Pylon ok admin_approval buildable_with_effort
+16 LiveAgent ok self_serve_trial ready_now
+17 Plain ok self_serve_trial ready_now
+18 Help Scout ok paid_plan buildable_with_effort
+19 Gorgias ok paid_plan buildable_with_effort
+20 Gladly ok partner_gated blocked
+21 Slack ok self_serve_free ready_now
+22 Twilio ok self_serve_free buildable_with_effort
+23 Zoho Cliq ok self_serve_free buildable_with_effort
+24 Lark (Larksuite) ok self_serve_free ready_now
+25 Pumble ok unknown buildable_with_effort
+26 Discord ok self_serve_free buildable_with_effort
+27 Telegram ok self_serve_free ready_now
+28 WhatsApp Business ok unknown buildable_with_effort
+29 Aircall ok partner_gated blocked
+30 Vonage ok self_serve_trial ready_now
+31 Google Ads ok self_serve_free ready_now
+32 Meta Ads ok self_serve_trial ready_now
+33 LinkedIn Ads ok admin_approval buildable_with_effort
+34 GoHighLevel ok unknown buildable_with_effort
+35 Mailchimp ok self_serve_free ready_now
+36 Klaviyo ok self_serve_free ready_now
+37 systeme.io ok self_serve_free buildable_with_effort
+38 Pinterest ok self_serve_trial ready_now
+39 Threads (Meta) ok self_serve_free ready_now
+40 SendGrid ok self_serve_free ready_now
+41 Shopify ok partner_gated blocked
+42 WooCommerce ok self_serve_free ready_now
+43 BigCommerce ok self_serve_trial ready_now
+44 Salesforce Commerce Cloud ok self_serve_trial ready_now
+45 Magento (Adobe Commerce) ok self_serve_free ready_now
+46 Squarespace ok self_serve_free ready_now
+47 Ecwid ok self_serve_free buildable_with_effort
+48 Gumroad ok self_serve_free ready_now
+49 Amazon Selling Partner ok self_serve_free ready_now
+50 fanbasis ok unknown buildable_with_effort
+51 DataForSEO ok self_serve_trial ready_now
+52 SE Ranking ok self_serve_trial buildable_with_effort
+53 Ahrefs ok self_serve_trial ready_now
+54 MrScraper ok self_serve_free ready_now
+55 Apify ok self_serve_free ready_now
+56 Firecrawl ok self_serve_free ready_now
+57 Bright Data ok self_serve_free ready_now
+58 Sherlock ok unknown buildable_with_effort
+59 Waterfall.io ok sales_contact blocked
+60 Clay ok self_serve_free buildable_with_effort
+61 GitHub ok self_serve_trial ready_now
+62 Vercel ok self_serve_free ready_now
+63 Netlify ok self_serve_free ready_now
+64 Cloudflare ok self_serve_free buildable_with_effort
+65 Supabase ok self_serve_free ready_now
+66 Neo4j ok self_serve_free buildable_with_effort
+67 Snowflake ok self_serve_trial buildable_with_effort
+68 MongoDB Atlas ok self_serve_free buildable_with_effort
+69 Datadog ok self_serve_free ready_now
+70 Sentry ok self_serve_trial ready_now
+71 Notion ok self_serve_free ready_now
+72 Airtable ok self_serve_free ready_now
+73 Linear ok self_serve_free ready_now
+74 Jira ok self_serve_free ready_now
+75 Asana ok self_serve_free ready_now
+76 Monday.com ok self_serve_free ready_now
+77 ClickUp ok self_serve_free ready_now
+78 Coda ok self_serve_free ready_now
+79 Smartsheet ok paid_plan buildable_with_effort
+80 Harvest ok self_serve_free ready_now
+81 Stripe ok unknown buildable_with_effort
+82 Plaid ok self_serve_free ready_now
+83 Binance ok self_serve_free buildable_with_effort
+84 Paygent Connect ok self_serve_trial buildable_with_effort
+85 iPayX ok self_serve_free buildable_with_effort
+86 QuickBooks ok self_serve_free ready_now
+87 Xero ok self_serve_trial buildable_with_effort
+88 Brex ok self_serve_free ready_now
+89 Ramp ok self_serve_free ready_now
+90 PitchBook ok sales_contact blocked
+91 NotebookLM ok self_serve_trial buildable_with_effort
+92 Otter AI ok paid_plan buildable_with_effort
+93 Fathom ok self_serve_free buildable_with_effort
+94 Consensus ok self_serve_free ready_now
+95 Reducto ok self_serve_trial ready_now
+96 Devin ok paid_plan buildable_with_effort
+97 higgsfield ok self_serve_free ready_now
+98 Mermaid CLI ok unknown buildable_with_effort
+99 YouTube Transcript ok self_serve_free buildable_with_effort
+100 Grain ok self_serve_free ready_now
+ok: 100 / 100
+1 Salesforce ok self_serve_free buildable_with_effort
+2 HubSpot ok self_serve_free ready_now
+3 Pipedrive ok self_serve_trial buildable_with_effort
+4 Attio ok self_serve_trial ready_now
+5 Twenty ok self_serve_free ready_now
+6 Podio ok self_serve_free ready_now
+7 Zoho CRM ok self_serve_free ready_now
+8 Close ok paid_plan buildable_with_effort
+9 Copper ok self_serve_trial buildable_with_effort
+10 DealCloud ok self_serve_trial ready_now
+11 Zendesk ok self_serve_trial ready_now
+12 Intercom ok self_serve_free ready_now
+13 Freshdesk ok self_serve_free ready_now
+14 Front ok self_serve_free buildable_with_effort
+15 Pylon ok admin_approval buildable_with_effort
+16 LiveAgent ok self_serve_trial ready_now
+17 Plain ok self_serve_trial ready_now
+18 Help Scout ok paid_plan buildable_with_effort
+19 Gorgias ok paid_plan buildable_with_effort
+20 Gladly ok partner_gated blocked
+21 Slack ok self_serve_free ready_now
+22 Twilio ok self_serve_free buildable_with_effort
+23 Zoho Cliq ok self_serve_free buildable_with_effort
+24 Lark (Larksuite) ok self_serve_free ready_now
+25 Pumble ok unknown buildable_with_effort
+26 Discord ok self_serve_free buildable_with_effort
+27 Telegram ok self_serve_free ready_now
+28 WhatsApp Business ok unknown buildable_with_effort
+29 Aircall ok partner_gated blocked
+30 Vonage ok self_serve_trial ready_now
+31 Google Ads ok self_serve_free ready_now
+32 Meta Ads ok self_serve_trial ready_now
+33 LinkedIn Ads ok admin_approval buildable_with_effort
+34 GoHighLevel ok unknown buildable_with_effort
+35 Mailchimp ok self_serve_free ready_now
+36 Klaviyo ok self_serve_free ready_now
+37 systeme.io ok self_serve_free buildable_with_effort
+38 Pinterest ok self_serve_trial ready_now
+39 Threads (Meta) ok self_serve_free ready_now
+40 SendGrid ok self_serve_free ready_now
+41 Shopify ok partner_gated blocked
+42 WooCommerce ok self_serve_free ready_now
+43 BigCommerce ok self_serve_trial ready_now
+44 Salesforce Commerce Cloud ok self_serve_trial ready_now
+45 Magento (Adobe Commerce) ok self_serve_free ready_now
+46 Squarespace ok self_serve_free ready_now
+47 Ecwid ok self_serve_free buildable_with_effort
+48 Gumroad ok self_serve_free ready_now
+49 Amazon Selling Partner ok self_serve_free ready_now
+50 fanbasis ok unknown buildable_with_effort
+51 DataForSEO ok self_serve_trial ready_now
+52 SE Ranking ok self_serve_trial buildable_with_effort
+53 Ahrefs ok self_serve_trial ready_now
+54 MrScraper ok self_serve_free ready_now
+55 Apify ok self_serve_free ready_now
+56 Firecrawl ok self_serve_free ready_now
+57 Bright Data ok self_serve_free ready_now
+58 Sherlock ok unknown buildable_with_effort
+59 Waterfall.io ok sales_contact blocked
+60 Clay ok self_serve_free buildable_with_effort
+61 GitHub ok self_serve_trial ready_now
+62 Vercel ok self_serve_free ready_now
+63 Netlify ok self_serve_free ready_now
+64 Cloudflare ok self_serve_free buildable_with_effort
+65 Supabase ok self_serve_free ready_now
+66 Neo4j ok self_serve_free buildable_with_effort
+67 Snowflake ok self_serve_trial buildable_with_effort
+68 MongoDB Atlas ok self_serve_free buildable_with_effort
+69 Datadog ok self_serve_free ready_now
+70 Sentry ok self_serve_trial ready_now
+71 Notion ok self_serve_free ready_now
+72 Airtable ok self_serve_free ready_now
+73 Linear ok self_serve_free ready_now
+74 Jira ok self_serve_free ready_now
+75 Asana ok self_serve_free ready_now
+76 Monday.com ok self_serve_free ready_now
+77 ClickUp ok self_serve_free ready_now
+78 Coda ok self_serve_free ready_now
+79 Smartsheet ok paid_plan buildable_with_effort
+80 Harvest ok self_serve_free ready_now
+81 Stripe ok unknown buildable_with_effort
+82 Plaid ok self_serve_free ready_now
+83 Binance ok self_serve_free buildable_with_effort
+84 Paygent Connect ok self_serve_trial buildable_with_effort
+85 iPayX ok self_serve_free buildable_with_effort
+86 QuickBooks ok self_serve_free ready_now
+87 Xero ok self_serve_trial buildable_with_effort
+88 Brex ok self_serve_free ready_now
+89 Ramp ok self_serve_free ready_now
+90 PitchBook ok sales_contact blocked
+91 NotebookLM ok self_serve_trial buildable_with_effort
+92 Otter AI ok paid_plan buildable_with_effort
+93 Fathom ok self_serve_free buildable_with_effort
+94 Consensus ok self_serve_free ready_now
+95 Reducto ok self_serve_trial ready_now
+96 Devin ok paid_plan buildable_with_effort
+97 higgsfield ok self_serve_free ready_now
+98 Mermaid CLI ok unknown buildable_with_effort
+99 YouTube Transcript ok self_serve_free buildable_with_effort
+100 Grain ok self_serve_free ready_now
+ok: 100 / 100
+1 Salesforce ok self_serve_free buildable_with_effort
+2 HubSpot ok self_serve_free ready_now
+3 Pipedrive ok self_serve_trial buildable_with_effort
+4 Attio ok self_serve_trial ready_now
+5 Twenty ok self_serve_free ready_now
+6 Podio ok self_serve_free ready_now
+7 Zoho CRM ok self_serve_free ready_now
+8 Close ok paid_plan buildable_with_effort
+9 Copper ok self_serve_trial buildable_with_effort
+10 DealCloud ok self_serve_trial ready_now
+11 Zendesk ok self_serve_trial ready_now
+12 Intercom ok self_serve_free ready_now
+13 Freshdesk ok self_serve_free ready_now
+14 Front ok self_serve_free buildable_with_effort
+15 Pylon ok admin_approval buildable_with_effort
+16 LiveAgent ok self_serve_trial ready_now
+17 Plain ok self_serve_trial ready_now
+18 Help Scout ok paid_plan buildable_with_effort
+19 Gorgias ok paid_plan buildable_with_effort
+20 Gladly ok partner_gated blocked
+21 Slack ok self_serve_free ready_now
+22 Twilio ok self_serve_free buildable_with_effort
+23 Zoho Cliq ok self_serve_free buildable_with_effort
+24 Lark (Larksuite) ok self_serve_free ready_now
+25 Pumble ok unknown buildable_with_effort
+26 Discord ok self_serve_free buildable_with_effort
+27 Telegram ok self_serve_free ready_now
+28 WhatsApp Business ok unknown buildable_with_effort
+29 Aircall ok partner_gated blocked
+30 Vonage ok self_serve_trial ready_now
+31 Google Ads ok self_serve_free ready_now
+32 Meta Ads ok self_serve_trial ready_now
+33 LinkedIn Ads ok admin_approval buildable_with_effort
+34 GoHighLevel ok unknown buildable_with_effort
+35 Mailchimp ok self_serve_free ready_now
+36 Klaviyo ok self_serve_free ready_now
+37 systeme.io ok self_serve_free buildable_with_effort
+38 Pinterest ok self_serve_trial ready_now
+39 Threads (Meta) ok self_serve_free ready_now
+40 SendGrid ok self_serve_free ready_now
+41 Shopify ok partner_gated blocked
+42 WooCommerce ok self_serve_free ready_now
+43 BigCommerce ok self_serve_trial ready_now
+44 Salesforce Commerce Cloud ok self_serve_trial ready_now
+45 Magento (Adobe Commerce) ok self_serve_free ready_now
+46 Squarespace ok self_serve_free ready_now
+47 Ecwid ok self_serve_free buildable_with_effort
+48 Gumroad ok self_serve_free ready_now
+49 Amazon Selling Partner ok self_serve_free ready_now
+50 fanbasis ok unknown buildable_with_effort
+51 DataForSEO ok self_serve_trial ready_now
+52 SE Ranking ok self_serve_trial buildable_with_effort
+53 Ahrefs ok self_serve_trial ready_now
+54 MrScraper ok self_serve_free ready_now
+55 Apify ok self_serve_free ready_now
+56 Firecrawl ok self_serve_free ready_now
+57 Bright Data ok self_serve_free ready_now
+58 Sherlock ok unknown buildable_with_effort
+59 Waterfall.io ok sales_contact blocked
+60 Clay ok self_serve_free buildable_with_effort
+61 GitHub ok self_serve_trial ready_now
+62 Vercel ok self_serve_free ready_now
+63 Netlify ok self_serve_free ready_now
+64 Cloudflare ok self_serve_free buildable_with_effort
+65 Supabase ok self_serve_free ready_now
+66 Neo4j ok self_serve_free buildable_with_effort
+67 Snowflake ok self_serve_trial buildable_with_effort
+68 MongoDB Atlas ok self_serve_free buildable_with_effort
+69 Datadog ok self_serve_free ready_now
+70 Sentry ok self_serve_trial ready_now
+71 Notion ok self_serve_free ready_now
+72 Airtable ok self_serve_free ready_now
+73 Linear ok self_serve_free ready_now
+74 Jira ok self_serve_free ready_now
+75 Asana ok self_serve_free ready_now
+76 Monday.com ok self_serve_free ready_now
+77 ClickUp ok self_serve_free ready_now
+78 Coda ok self_serve_free ready_now
+79 Smartsheet ok paid_plan buildable_with_effort
+80 Harvest ok self_serve_free ready_now
+81 Stripe ok unknown buildable_with_effort
+82 Plaid ok self_serve_free ready_now
+83 Binance ok self_serve_free buildable_with_effort
+84 Paygent Connect ok self_serve_trial buildable_with_effort
+85 iPayX ok self_serve_free buildable_with_effort
+86 QuickBooks ok self_serve_free ready_now
+87 Xero ok self_serve_trial buildable_with_effort
+88 Brex ok self_serve_free ready_now
+89 Ramp ok self_serve_free ready_now
+90 PitchBook ok sales_contact blocked
+91 NotebookLM ok self_serve_trial buildable_with_effort
+92 Otter AI ok paid_plan buildable_with_effort
+93 Fathom ok self_serve_free buildable_with_effort
+94 Consensus ok self_serve_free ready_now
+95 Reducto ok self_serve_trial ready_now
+96 Devin ok paid_plan buildable_with_effort
+97 higgsfield ok self_serve_free ready_now
+98 Mermaid CLI ok unknown buildable_with_effort
+99 YouTube Transcript ok self_serve_free buildable_with_effort
+100 Grain ok self_serve_free ready_now
