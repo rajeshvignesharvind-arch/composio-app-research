@@ -4,8 +4,14 @@ from .util import key, post, norm
 from .fetch import scrape, search
 from .extract import critic_for, quote_ok
 
+import itertools, threading
+_KEYS = [os.environ[k] for k in ("GROQ_API_KEY", "GROQ_API_KEY_2") if os.environ.get(k)]
+_rr = itertools.cycle(range(max(1, len(_KEYS)))); _lock = threading.Lock()
+def _next_key():
+    with _lock: return _KEYS[next(_rr)] if _KEYS else key("GROQ_API_KEY")   # round-robin: keys used for quota only
+
 def groq_raw(model, sys, user):
-    r = post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {key('GROQ_API_KEY')}"},
+    r = post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {_next_key()}"},
              {"model": model, "temperature": 0, **({"reasoning_effort": "low"} if "gpt-oss" in model else {}),
               "response_format": {"type": "json_object"}, "messages": [{"role": "system", "content": sys}, {"role": "user", "content": user}]})
     return json.loads(r["choices"][0]["message"]["content"])
