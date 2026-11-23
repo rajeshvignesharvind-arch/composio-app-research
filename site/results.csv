@@ -1,101 +1,101 @@
 id,app,category,primary_auth,auth_methods,credential_access,api_type,api_breadth,existing_mcp,buildability,main_blocker,composio_toolkit,docs_url
-1,Salesforce,CRM and Sales,oauth2,oauth2|bearer_token,self_serve_free,unknown,unknown,unknown,buildable_with_effort,other,yes,https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html
-2,HubSpot,CRM and Sales,oauth2,oauth2|api_key,self_serve_free,rest,broad,unknown,ready_now,none,yes,https://developers.hubspot.com/docs/api-reference/latest/overview
-3,Pipedrive,CRM and Sales,oauth2,oauth2|api_key,self_serve_trial,rest,unknown,unknown,buildable_with_effort,other,yes,https://developers.pipedrive.com/docs/api/v1
-4,Attio,CRM and Sales,unknown,unknown,self_serve_trial,rest,moderate,official,ready_now,none,yes,https://docs.attio.com/
-5,Twenty,CRM and Sales,oauth2,unknown,unknown,rest|graphql,broad,unknown,buildable_with_effort,other,yes,https://docs.twenty.com/developers/extend/api
-6,Podio,CRM and Sales,unknown,unknown,unknown,unknown,unknown,unknown,buildable_with_effort,other,yes,https://developers.podio.com
+1,Salesforce,CRM and Sales,oauth2,oauth2|bearer_token,self_serve_free,rest,unknown,official,buildable_with_effort,other,yes,https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html
+2,HubSpot,CRM and Sales,oauth2,oauth2|api_key,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.hubspot.com/docs/api-reference/latest/overview
+3,Pipedrive,CRM and Sales,oauth2,oauth2|api_key,self_serve_trial,rest,unknown,official,buildable_with_effort,other,yes,https://developers.pipedrive.com/docs/api/v1
+4,Attio,CRM and Sales,oauth2,oauth2,self_serve_trial,rest,moderate,official,ready_now,none,yes,https://docs.attio.com/
+5,Twenty,CRM and Sales,oauth2,unknown,self_serve_free,rest|graphql,broad,community,ready_now,none,yes,https://docs.twenty.com/developers/extend/api
+6,Podio,CRM and Sales,unknown,unknown,self_serve_free,unknown,broad,none_found,ready_now,none,yes,https://developers.podio.com
 7,Zoho CRM,CRM and Sales,oauth2,oauth2,self_serve_free,rest|graphql,broad,official,ready_now,none,yes,https://www.zoho.com/crm/developer/docs/api/v8
-8,Close,CRM and Sales,oauth2,oauth2|api_key,self_serve_trial,unknown,unknown,unknown,buildable_with_effort,other,yes,https://developer.close.com/api
-9,Copper,CRM and Sales,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-10,DealCloud,CRM and Sales,oauth2,unknown,unknown,rest,moderate,official,buildable_with_effort,other,no,https://api.docs.dealcloud.com
-11,Zendesk,Support and Helpdesk,oauth2,basic|api_key|oauth2|bearer_token,self_serve_trial,rest,broad,unknown,ready_now,none,yes,https://developer.zendesk.com/api-reference
+8,Close,CRM and Sales,oauth2,oauth2|api_key,paid_plan,unknown,unknown,community,buildable_with_effort,paid_plan,yes,https://developer.close.com/api
+9,Copper,CRM and Sales,oauth2,api_key|oauth2,self_serve_trial,rest,unknown,official,buildable_with_effort,other,yes,https://developer.copper.com/
+10,DealCloud,CRM and Sales,oauth2,oauth2|api_key,self_serve_trial,rest,moderate,official,ready_now,none,no,https://api.docs.dealcloud.com
+11,Zendesk,Support and Helpdesk,oauth2,basic|api_key|oauth2|bearer_token,self_serve_trial,rest,broad,official,ready_now,none,yes,https://developer.zendesk.com/api-reference
 12,Intercom,Support and Helpdesk,oauth2,oauth2|bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.intercom.com/docs/references/rest-api/api.intercom.io
-13,Freshdesk,Support and Helpdesk,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-14,Front,Support and Helpdesk,oauth2,oauth2|bearer_token,self_serve_free,rest,unknown,unknown,buildable_with_effort,other,yes,https://dev.frontapp.com
-15,Pylon,Support and Helpdesk,bearer_token,bearer_token,admin_approval,rest|sdk_only|cli_only,unknown,unknown,buildable_with_effort,app_review,no,https://docs.usepylon.com/pylon-docs/developer/api
-16,LiveAgent,Support and Helpdesk,bearer_token,api_key|bearer_token,unknown,rest,moderate,unknown,buildable_with_effort,other,no,https://support.liveagent.com/567924-Documentation
-17,Plain,Support and Helpdesk,oauth2,unknown,unknown,graphql,broad,official,buildable_with_effort,other,yes,https://www.plain.com/docs/graphql/introduction
-18,Help Scout,Support and Helpdesk,oauth2,oauth2|api_key,self_serve_free,rest,unknown,unknown,buildable_with_effort,other,yes,https://developer.helpscout.com
-19,Gorgias,Support and Helpdesk,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-20,Gladly,Support and Helpdesk,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-21,Slack,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-22,Twilio,Communications and Messaging,basic,basic|api_key,self_serve_free,unknown,unknown,official,buildable_with_effort,other,yes,https://www.twilio.com/docs
-23,Zoho Cliq,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-24,Lark (Larksuite),Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-25,Pumble,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-26,Discord,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-27,Telegram,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-28,WhatsApp Business,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-29,Aircall,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-30,Vonage,Communications and Messaging,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-31,Google Ads,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-32,Meta Ads,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-33,LinkedIn Ads,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-34,GoHighLevel,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-35,Mailchimp,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-36,Klaviyo,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-37,systeme.io,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-38,Pinterest,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-39,Threads (Meta),Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-40,SendGrid,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-41,Shopify,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-42,WooCommerce,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-43,BigCommerce,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-44,Salesforce Commerce Cloud,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-45,Magento (Adobe Commerce),Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-46,Squarespace,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-47,Ecwid,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-48,Gumroad,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-49,Amazon Selling Partner,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-50,fanbasis,Ecommerce,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-51,DataForSEO,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-52,SE Ranking,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-53,Ahrefs,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-54,MrScraper,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-55,Apify,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-56,Firecrawl,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-57,Bright Data,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-58,Sherlock,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-59,Waterfall.io,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-60,Clay,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-61,GitHub,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-62,Vercel,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-63,Netlify,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-64,Cloudflare,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-65,Supabase,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-66,Neo4j,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-67,Snowflake,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-68,MongoDB Atlas,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-69,Datadog,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-70,Sentry,Developer Infra and Data,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-71,Notion,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-72,Airtable,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-73,Linear,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-74,Jira,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-75,Asana,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-76,Monday.com,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-77,ClickUp,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-78,Coda,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-79,Smartsheet,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-80,Harvest,Productivity and PM,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-81,Stripe,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-82,Plaid,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-83,Binance,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-84,Paygent Connect,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-85,iPayX,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-86,QuickBooks,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-87,Xero,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-88,Brex,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-89,Ramp,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-90,PitchBook,Finance and Fintech,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-91,NotebookLM,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-92,Otter AI,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-93,Fathom,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-94,Consensus,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-95,Reducto,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-96,Devin,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-97,higgsfield,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-98,Mermaid CLI,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,no,
-99,YouTube Transcript,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
-100,Grain,AI Research and Media,unknown,unknown,unknown,unknown,unknown,unknown,unknown,unknown,yes,
+13,Freshdesk,Support and Helpdesk,oauth2,oauth2|api_key,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.freshdesk.com/api
+14,Front,Support and Helpdesk,oauth2,oauth2|bearer_token,self_serve_free,rest,unknown,official,buildable_with_effort,other,yes,https://dev.frontapp.com
+15,Pylon,Support and Helpdesk,bearer_token,bearer_token,admin_approval,rest,unknown,official,buildable_with_effort,app_review,no,https://docs.usepylon.com/pylon-docs/developer/api
+16,LiveAgent,Support and Helpdesk,api_key,api_key|bearer_token,self_serve_trial,rest,moderate,official,ready_now,none,no,https://support.liveagent.com/567924-Documentation
+17,Plain,Support and Helpdesk,oauth2,unknown,self_serve_trial,graphql,broad,official,ready_now,none,yes,https://www.plain.com/docs/graphql/introduction
+18,Help Scout,Support and Helpdesk,oauth2,oauth2|api_key,paid_plan,rest,moderate,official,buildable_with_effort,paid_plan,yes,https://developer.helpscout.com
+19,Gorgias,Support and Helpdesk,basic,basic|oauth2,paid_plan,rest,broad,official,buildable_with_effort,paid_plan,yes,https://developers.gorgias.com
+20,Gladly,Support and Helpdesk,oauth2,unknown,partner_gated,rest,unknown,official,blocked,partner_approval,no,https://developer.gladly.com/rest/
+21,Slack,Communications and Messaging,oauth2,oauth2|bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://api.slack.com/web
+22,Twilio,Communications and Messaging,basic,basic|api_key,self_serve_free,rest,unknown,official,buildable_with_effort,other,yes,https://www.twilio.com/docs
+23,Zoho Cliq,Communications and Messaging,oauth2,oauth2,self_serve_free,rest,unknown,official,buildable_with_effort,other,yes,https://www.zoho.com/cliq/help/restapi/v3/introduction
+24,Lark (Larksuite),Communications and Messaging,bearer_token,bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://open.larksuite.com/document/ukTMukTMukTM/uMTNz4yM1MjLzUzM
+25,Pumble,Communications and Messaging,api_key,api_key|bearer_token,unknown,rest,narrow,official,buildable_with_effort,narrow_api,yes,https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/
+26,Discord,Communications and Messaging,oauth2,oauth2|bearer_token|basic,self_serve_free,rest|websocket,unknown,community,buildable_with_effort,other,yes,https://docs.discord.com/developers/reference
+27,Telegram,Communications and Messaging,bearer_token,bearer_token,self_serve_free,rest,broad,community,ready_now,none,yes,https://core.telegram.org
+28,WhatsApp Business,Communications and Messaging,bearer_token,bearer_token|oauth2,unknown,rest,moderate,official,buildable_with_effort,other,yes,https://developers.facebook.com/docs/whatsapp
+29,Aircall,Communications and Messaging,oauth2,oauth2|basic,partner_gated,rest,moderate,official,blocked,partner_approval,yes,https://developer.aircall.io/docs/introduction
+30,Vonage,Communications and Messaging,bearer_token,basic|jwt_service_account,self_serve_trial,rest,broad,official,ready_now,none,no,https://developer.vonage.com/en/documentation
+31,Google Ads,Marketing Ads Email Social,oauth2,oauth2|jwt_service_account,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.google.com/google-ads
+32,Meta Ads,Marketing Ads Email Social,unknown,unknown,self_serve_trial,rest,moderate,official,ready_now,none,yes,https://developers.facebook.com/docs/marketing-apis
+33,LinkedIn Ads,Marketing Ads Email Social,oauth2,oauth2,admin_approval,rest,broad,community,buildable_with_effort,app_review,yes,https://learn.microsoft.com/linkedin/marketing
+34,GoHighLevel,Marketing Ads Email Social,unknown,unknown,unknown,unknown,unknown,official,buildable_with_effort,other,yes,"{'value': None, 'source': None, 'quote': None, 'confidence': 'low'}"
+35,Mailchimp,Marketing Ads Email Social,api_key,unknown,self_serve_free,rest,broad,official,ready_now,none,yes,https://mailchimp.com/developer
+36,Klaviyo,Marketing Ads Email Social,oauth2,api_key,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.klaviyo.com/en/docs/get_started
+37,systeme.io,Marketing Ads Email Social,api_key,api_key,self_serve_free,rest,narrow,official,buildable_with_effort,narrow_api,no,https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io
+38,Pinterest,Marketing Ads Email Social,oauth2,oauth2,self_serve_trial,rest,broad,community,ready_now,none,yes,https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization
+39,Threads (Meta),Marketing Ads Email Social,oauth2,oauth2,self_serve_free,rest,moderate,official,ready_now,none,yes,https://developers.facebook.com/docs/threads
+40,SendGrid,Marketing Ads Email Social,bearer_token,api_key|bearer_token|basic,self_serve_free,rest,broad,community,ready_now,none,yes,https://www.twilio.com/docs/sendgrid/api-reference
+41,Shopify,Ecommerce,oauth2,oauth2|bearer_token,partner_gated,rest|graphql,broad,official,blocked,partner_approval,yes,https://shopify.dev
+42,WooCommerce,Ecommerce,api_key,api_key|basic,self_serve_free,rest,broad,official,ready_now,none,no,https://woocommerce.github.io/woocommerce-rest-api-docs/
+43,BigCommerce,Ecommerce,oauth2,oauth2,self_serve_trial,rest|graphql,broad,official,ready_now,none,yes,https://developer.bigcommerce.com
+44,Salesforce Commerce Cloud,Ecommerce,oauth2,oauth2,self_serve_trial,rest,broad,official,ready_now,none,yes,https://developer.salesforce.com/docs/commerce
+45,Magento (Adobe Commerce),Ecommerce,oauth2,oauth2|bearer_token,self_serve_free,rest,broad,community,ready_now,none,no,https://developer.adobe.com/commerce/webapi/rest
+46,Squarespace,Ecommerce,oauth2,unknown,self_serve_free,rest,moderate,official,ready_now,none,no,https://developers.squarespace.com/commerce-apis/overview
+47,Ecwid,Ecommerce,api_key,api_key|bearer_token,self_serve_free,rest,unknown,none_found,buildable_with_effort,other,no,https://api-docs.ecwid.com
+48,Gumroad,Ecommerce,oauth2,oauth2|bearer_token,self_serve_free,rest,moderate,official,ready_now,none,yes,https://gumroad.com/api
+49,Amazon Selling Partner,Ecommerce,oauth2,oauth2,self_serve_free,rest,broad,official,ready_now,none,yes,https://developer-docs.amazon.com/sp-api
+50,fanbasis,Ecommerce,unknown,unknown,unknown,unknown,unknown,community,buildable_with_effort,other,no,"{'value': None, 'source': None, 'quote': None, 'confidence': 'low'}"
+51,DataForSEO,Data SEO and Scraping,basic,basic,self_serve_trial,unknown,broad,official,ready_now,none,yes,https://docs.dataforseo.com
+52,SE Ranking,Data SEO and Scraping,api_key,api_key,self_serve_trial,rest,unknown,official,buildable_with_effort,other,no,https://seranking.com/api.html
+53,Ahrefs,Data SEO and Scraping,api_key,api_key,self_serve_trial,rest,broad,official,ready_now,none,yes,https://docs.ahrefs.com
+54,MrScraper,Data SEO and Scraping,bearer_token,bearer_token,self_serve_free,rest,moderate,official,ready_now,none,yes,"{'value': 'https://docs.mrscraper.com', 'source': 0, 'quote': 'Discover how our powerful scraping platform can transform the way you extract data.', 'confidence': 'high'}"
+55,Apify,Data SEO and Scraping,bearer_token,bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://docs.apify.com
+56,Firecrawl,Data SEO and Scraping,bearer_token,bearer_token,self_serve_free,unknown,moderate,official,ready_now,none,yes,https://docs.firecrawl.dev/api-reference/introduction
+57,Bright Data,Data SEO and Scraping,api_key,api_key|bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://docs.brightdata.com/introduction
+58,Sherlock,Data SEO and Scraping,unknown,unknown,unknown,unknown,unknown,community,buildable_with_effort,other,no,"{'value': None, 'source': None, 'quote': None, 'confidence': 'high'}"
+59,Waterfall.io,Data SEO and Scraping,api_key,api_key,sales_contact,rest,moderate,community,blocked,partner_approval,no,https://docs.waterfall.io/v1/overview
+60,Clay,Data SEO and Scraping,api_key,api_key,self_serve_free,rest,narrow,community,buildable_with_effort,narrow_api,yes,https://developers.clay.com/public-api/authentication
+61,GitHub,Developer Infra and Data,oauth2,oauth2|bearer_token,self_serve_trial,rest,broad,official,ready_now,none,yes,https://docs.github.com/rest
+62,Vercel,Developer Infra and Data,bearer_token,bearer_token|oauth2,self_serve_free,rest,moderate,official,ready_now,none,yes,https://vercel.com/docs/rest-api
+63,Netlify,Developer Infra and Data,oauth2,oauth2|bearer_token,self_serve_free,rest,broad,official,ready_now,none,no,https://docs.netlify.com/api
+64,Cloudflare,Developer Infra and Data,unknown,unknown,self_serve_free,rest,unknown,official,buildable_with_effort,other,yes,https://developers.cloudflare.com/api
+65,Supabase,Developer Infra and Data,api_key,api_key|jwt_service_account,self_serve_free,rest|sdk_only,broad,official,ready_now,none,yes,https://supabase.com/docs
+66,Neo4j,Developer Infra and Data,other,basic|bearer_token,self_serve_free,rest,narrow,official,buildable_with_effort,narrow_api,yes,https://neo4j.com/docs/api
+67,Snowflake,Developer Infra and Data,oauth2,unknown,self_serve_trial,rest,unknown,official,buildable_with_effort,other,yes,https://docs.snowflake.com
+68,MongoDB Atlas,Developer Infra and Data,oauth2,oauth2|api_key,self_serve_free,unknown,unknown,official,buildable_with_effort,other,yes,https://www.mongodb.com/docs/atlas/api
+69,Datadog,Developer Infra and Data,api_key,api_key|oauth2,self_serve_free,rest,broad,official,ready_now,none,yes,https://docs.datadoghq.com/api/latest/
+70,Sentry,Developer Infra and Data,auth_from_oauth2,bearer_token|oauth2,self_serve_trial,rest,moderate,official,ready_now,none,yes,https://docs.sentry.io/api
+71,Notion,Productivity and PM,bearer_token,bearer_token|oauth2,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.notion.com
+72,Airtable,Productivity and PM,bearer_token,bearer_token,self_serve_free,rest,moderate,official,ready_now,none,yes,https://airtable.com/developers/web/api/introduction
+73,Linear,Productivity and PM,oauth2,oauth2|bearer_token,self_serve_free,graphql,moderate,official,ready_now,none,yes,https://developers.linear.app
+74,Jira,Productivity and PM,bearer_token,basic|bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro
+75,Asana,Productivity and PM,oauth2,bearer_token|oauth2,self_serve_free,rest,broad,official,ready_now,none,yes,https://developers.asana.com
+76,Monday.com,Productivity and PM,oauth2,oauth2|bearer_token,self_serve_free,graphql,moderate,official,ready_now,none,yes,https://developer.monday.com/api-reference/docs/authentication
+77,ClickUp,Productivity and PM,oauth2,bearer_token|oauth2,self_serve_free,rest,broad,official,ready_now,none,yes,https://developer.clickup.com/docs/Getting%20Started
+78,Coda,Productivity and PM,bearer_token,bearer_token,self_serve_free,rest,broad,official,ready_now,none,yes,https://coda.io/developers
+79,Smartsheet,Productivity and PM,oauth2,bearer_token|oauth2,paid_plan,rest,broad,official,buildable_with_effort,paid_plan,yes,https://developers.smartsheet.com/api/smartsheet
+80,Harvest,Productivity and PM,bearer_token,oauth2|bearer_token,self_serve_free,rest,moderate,official,ready_now,none,yes,"{'value': 'https://help.getharvest.com/api-v2', 'source': 0, 'quote': 'https://help.getharvest.com/api-v2', 'confidence': 'high'}"
+81,Stripe,Finance and Fintech,api_key,api_key|oauth2,unknown,rest,unknown,community,buildable_with_effort,other,yes,https://docs.stripe.com/api
+82,Plaid,Finance and Fintech,oauth2,oauth2|bearer_token,self_serve_free,rest,moderate,official,ready_now,none,yes,https://plaid.com/docs
+83,Binance,Finance and Fintech,api_key,api_key|hmac_signature,self_serve_free,rest|websocket,unknown,official,buildable_with_effort,other,no,https://testnet.binance.vision/api
+84,Paygent Connect,Finance and Fintech,oauth2,oauth2|bearer_token,self_serve_trial,rest,unknown,official,buildable_with_effort,other,no,https://www.pagent.ai/docs/guides/mcp
+85,iPayX,Finance and Fintech,bearer_token,bearer_token,self_serve_free,rest,narrow,community,buildable_with_effort,narrow_api,no,https://www.ipayx.ai/docs
+86,QuickBooks,Finance and Fintech,oauth2,oauth2|bearer_token,self_serve_free,unknown,broad,official,ready_now,none,yes,https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0
+87,Xero,Finance and Fintech,oauth2,oauth2,self_serve_trial,rest,unknown,official,buildable_with_effort,other,yes,https://developer.xero.com
+88,Brex,Finance and Fintech,bearer_token,bearer_token,self_serve_free,unknown,broad,official,ready_now,none,yes,https://developer.brex.com
+89,Ramp,Finance and Fintech,oauth2,oauth2|basic,self_serve_free,rest,broad,official,ready_now,none,yes,https://docs.ramp.com
+90,PitchBook,Finance and Fintech,api_key,api_key|bearer_token,sales_contact,rest,broad,official,blocked,partner_approval,yes,https://pitchbook.com/help/PitchBook-api
+91,NotebookLM,AI Research and Media,api_key,api_key,self_serve_trial,rest,unknown,community,buildable_with_effort,other,no,https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks
+92,Otter AI,AI Research and Media,bearer_token,bearer_token,paid_plan,rest,moderate,official,buildable_with_effort,paid_plan,no,https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API
+93,Fathom,AI Research and Media,oauth2,oauth2|api_key,self_serve_free,rest,unknown,official,buildable_with_effort,other,yes,https://developers.fathom.ai/quickstart
+94,Consensus,AI Research and Media,bearer_token,bearer_token|api_key,self_serve_free,rest,moderate,official,ready_now,none,yes,https://docs.consensus.app/api-get-started
+95,Reducto,AI Research and Media,api_key,unknown,self_serve_trial,rest|sdk_only,moderate,official,ready_now,none,no,https://docs.reducto.ai
+96,Devin,AI Research and Media,bearer_token,bearer_token|api_key,paid_plan,rest,unknown,official,buildable_with_effort,paid_plan,no,https://docs.devin.ai/api-reference/overview
+97,higgsfield,AI Research and Media,api_key,api_key,self_serve_free,unknown,moderate,official,ready_now,none,yes,https://docs.higgsfield.ai/docs/authentication
+98,Mermaid CLI,AI Research and Media,unknown,unknown,unknown,unknown,unknown,community,buildable_with_effort,other,no,"{'value': None, 'source': None, 'quote': None, 'confidence': 'low'}"
+99,YouTube Transcript,AI Research and Media,bearer_token,bearer_token,self_serve_free,rest,narrow,official,buildable_with_effort,narrow_api,yes,https://transcriptapi.com/docs/api
+100,Grain,AI Research and Media,oauth2,oauth2|bearer_token,self_serve_free,rest,moderate,official,ready_now,none,yes,"{'value': 'https://developers.grain.com', 'source': 2, 'quote': 'The Grain API lets you read and manage recordings, highlights, uploads, and more.', 'confidence': 'high'}"

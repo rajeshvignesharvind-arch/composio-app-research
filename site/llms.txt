@@ -2,5 +2,5 @@
 
 Machine-readable: results.json (full records with evidence), results.csv, schema.json.
 Each scored field has value + evidence_url + verbatim quote. 'unknown' means not confirmed from sources.
-Summary: 92% self-serve; primary auth oauth2 (12 apps); 5 ready now; 0 blocked.
-Verification accuracy (gold set): pending.
+Summary: 86% self-serve; primary auth oauth2 (48 apps); 58 ready now; 5 blocked.
+Verification accuracy (gold set): 45.0%.

@@ -1,6 +1,6 @@
 {
  "n": 100,
- "n_ok": 17,
+ "n_ok": 100,
  "categories": [
   "CRM and Sales",
   "Support and Helpdesk",
@@ -16,182 +16,462 @@
  "primary_auth": [
   [
    "oauth2",
-   12
+   48
   ],
   [
    "bearer_token",
-   2
+   21
+  ],
+  [
+   "api_key",
+   19
   ],
   [
    "basic",
+   3
+  ],
+  [
+   "other",
+   1
+  ],
+  [
+   "auth_from_oauth2",
    1
   ]
  ],
  "auth_methods_any": [
   [
    "oauth2",
-   9
-  ],
-  [
-   "api_key",
-   7
+   50
   ],
   [
    "bearer_token",
-   6
+   47
+  ],
+  [
+   "api_key",
+   32
   ],
   [
    "basic",
-   2
-  ]
- ],
- "multi_auth": 10,
- "access": [
-  [
-   "self_serve_free",
-   7
+   12
   ],
   [
-   "self_serve_trial",
-   4
+   "jwt_service_account",
+   3
   ],
   [
-   "admin_approval",
+   "hmac_signature",
    1
   ]
  ],
- "self_serve_pct": 92,
+ "multi_auth": 55,
+ "access": [
+  [
+   "self_serve_free",
+   58
+  ],
+  [
+   "self_serve_trial",
+   22
+  ],
+  [
+   "paid_plan",
+   6
+  ],
+  [
+   "partner_gated",
+   3
+  ],
+  [
+   "admin_approval",
+   2
+  ],
+  [
+   "sales_contact",
+   2
+  ]
+ ],
+ "self_serve_pct": 86,
  "matrix": {
   "CRM and Sales": {
-   "self_serve_free": 3,
-   "self_serve_trial": 3
+   "self_serve_free": 5,
+   "self_serve_trial": 4,
+   "paid_plan": 1
   },
   "Support and Helpdesk": {
-   "self_serve_trial": 1,
+   "self_serve_trial": 3,
    "self_serve_free": 3,
-   "admin_approval": 1
+   "admin_approval": 1,
+   "paid_plan": 2,
+   "partner_gated": 1
   },
   "Communications and Messaging": {
-   "self_serve_free": 1
+   "self_serve_free": 6,
+   "partner_gated": 1,
+   "self_serve_trial": 1
   },
-  "Marketing Ads Email Social": {},
-  "Ecommerce": {},
-  "Data SEO and Scraping": {},
-  "Developer Infra and Data": {},
-  "Productivity and PM": {},
-  "Finance and Fintech": {},
-  "AI Research and Media": {}
+  "Marketing Ads Email Social": {
+   "self_serve_free": 6,
+   "self_serve_trial": 2,
+   "admin_approval": 1
+  },
+  "Ecommerce": {
+   "partner_gated": 1,
+   "self_serve_free": 6,
+   "self_serve_trial": 2
+  },
+  "Data SEO and Scraping": {
+   "self_serve_trial": 3,
+   "self_serve_free": 5,
+   "sales_contact": 1
+  },
+  "Developer Infra and Data": {
+   "self_serve_trial": 3,
+   "self_serve_free": 7
+  },
+  "Productivity and PM": {
+   "self_serve_free": 9,
+   "paid_plan": 1
+  },
+  "Finance and Fintech": {
+   "self_serve_free": 6,
+   "self_serve_trial": 2,
+   "sales_contact": 1
+  },
+  "AI Research and Media": {
+   "self_serve_trial": 2,
+   "paid_plan": 2,
+   "self_serve_free": 5
+  }
  },
  "blockers": [
   [
-   "other",
-   11,
-   [
-    "Salesforce",
-    "Pipedrive",
-    "Twenty",
-    "Podio",
-    "Close",
-    "DealCloud",
-    "Front",
-    "LiveAgent",
-    "Plain",
-    "Help Scout",
-    "Twilio"
-   ]
-  ],
-  [
    "none",
-   5,
+   58,
    [
     "HubSpot",
     "Attio",
+    "Twenty",
+    "Podio",
     "Zoho CRM",
+    "DealCloud",
     "Zendesk",
-    "Intercom"
+    "Intercom",
+    "Freshdesk",
+    "LiveAgent",
+    "Plain",
+    "Slack",
+    "Lark (Larksuite)",
+    "Telegram",
+    "Vonage",
+    "Google Ads",
+    "Meta Ads",
+    "Mailchimp",
+    "Klaviyo",
+    "Pinterest",
+    "Threads (Meta)",
+    "SendGrid",
+    "WooCommerce",
+    "BigCommerce",
+    "Salesforce Commerce Cloud",
+    "Magento (Adobe Commerce)",
+    "Squarespace",
+    "Gumroad",
+    "Amazon Selling Partner",
+    "DataForSEO",
+    "Ahrefs",
+    "MrScraper",
+    "Apify",
+    "Firecrawl",
+    "Bright Data",
+    "GitHub",
+    "Vercel",
+    "Netlify",
+    "Supabase",
+    "Datadog",
+    "Sentry",
+    "Notion",
+    "Airtable",
+    "Linear",
+    "Jira",
+    "Asana",
+    "Monday.com",
+    "ClickUp",
+    "Coda",
+    "Harvest",
+    "Plaid",
+    "QuickBooks",
+    "Brex",
+    "Ramp",
+    "Consensus",
+    "Reducto",
+    "higgsfield",
+    "Grain"
+   ]
+  ],
+  [
+   "other",
+   23,
+   [
+    "Salesforce",
+    "Pipedrive",
+    "Copper",
+    "Front",
+    "Twilio",
+    "Zoho Cliq",
+    "Discord",
+    "WhatsApp Business",
+    "GoHighLevel",
+    "Ecwid",
+    "fanbasis",
+    "SE Ranking",
+    "Sherlock",
+    "Cloudflare",
+    "Snowflake",
+    "MongoDB Atlas",
+    "Stripe",
+    "Binance",
+    "Paygent Connect",
+    "Xero",
+    "NotebookLM",
+    "Fathom",
+    "Mermaid CLI"
+   ]
+  ],
+  [
+   "paid_plan",
+   6,
+   [
+    "Close",
+    "Help Scout",
+    "Gorgias",
+    "Smartsheet",
+    "Otter AI",
+    "Devin"
+   ]
+  ],
+  [
+   "narrow_api",
+   6,
+   [
+    "Pumble",
+    "systeme.io",
+    "Clay",
+    "Neo4j",
+    "iPayX",
+    "YouTube Transcript"
+   ]
+  ],
+  [
+   "partner_approval",
+   5,
+   [
+    "Gladly",
+    "Aircall",
+    "Shopify",
+    "Waterfall.io",
+    "PitchBook"
    ]
   ],
   [
    "app_review",
-   1,
+   2,
    [
-    "Pylon"
+    "Pylon",
+    "LinkedIn Ads"
    ]
   ]
  ],
  "buildability": [
   [
-   "buildable_with_effort",
-   12
+   "ready_now",
+   58
   ],
   [
-   "ready_now",
+   "buildable_with_effort",
+   37
+  ],
+  [
+   "blocked",
    5
   ]
  ],
  "mcp": [
   [
-   "unknown",
-   11
+   "official",
+   82
   ],
   [
-   "official",
-   6
+   "community",
+   16
+  ],
+  [
+   "none_found",
+   2
   ]
  ],
  "breadth": [
   [
-   "unknown",
-   8
+   "broad",
+   43
   ],
   [
-   "broad",
-   6
+   "unknown",
+   26
   ],
   [
    "moderate",
-   3
+   25
+  ],
+  [
+   "narrow",
+   6
   ]
  ],
  "api_type": [
   [
    "rest",
-   12
+   85
   ],
   [
    "graphql",
-   3
+   7
+  ],
+  [
+   "websocket",
+   2
   ],
   [
    "sdk_only",
-   1
-  ],
-  [
-   "cli_only",
-   1
+   2
   ]
  ],
  "build_now": [
   "HubSpot",
   "Attio",
+  "Twenty",
+  "Podio",
   "Zoho CRM",
+  "DealCloud",
   "Zendesk",
-  "Intercom"
+  "Intercom",
+  "Freshdesk",
+  "LiveAgent",
+  "Plain",
+  "Slack",
+  "Lark (Larksuite)",
+  "Telegram",
+  "Vonage",
+  "Google Ads",
+  "Meta Ads",
+  "Mailchimp",
+  "Klaviyo",
+  "Pinterest",
+  "Threads (Meta)",
+  "SendGrid",
+  "WooCommerce",
+  "BigCommerce",
+  "Salesforce Commerce Cloud",
+  "Magento (Adobe Commerce)",
+  "Squarespace",
+  "Gumroad",
+  "Amazon Selling Partner",
+  "DataForSEO",
+  "Ahrefs",
+  "MrScraper",
+  "Apify",
+  "Firecrawl",
+  "Bright Data",
+  "GitHub",
+  "Vercel",
+  "Netlify",
+  "Supabase",
+  "Datadog",
+  "Sentry",
+  "Notion",
+  "Airtable",
+  "Linear",
+  "Jira",
+  "Asana",
+  "Monday.com",
+  "ClickUp",
+  "Coda",
+  "Harvest",
+  "Plaid",
+  "QuickBooks",
+  "Brex",
+  "Ramp",
+  "Consensus",
+  "Reducto",
+  "higgsfield",
+  "Grain"
  ],
- "outreach": [],
+ "outreach": [
+  {
+   "app": "Gladly",
+   "why": "partner_gated",
+   "note": "Requires an API token; sandbox available via CSM or support; OAuth optional via third\u2011party MCP."
+  },
+  {
+   "app": "Aircall",
+   "why": "partner_gated",
+   "note": "Public apps require partner approval and submission of a plan before receiving OAuth credentials; private apps use Basic Auth with API keys generated by customers."
+  },
+  {
+   "app": "Shopify",
+   "why": "partner_gated",
+   "note": "Developers can self-serve a free development store for testing. Publishing to the App Store requires a one-time $19 registration fee."
+  },
+  {
+   "app": "Waterfall.io",
+   "why": "sales_contact",
+   "note": "Pricing is outcome-based on credits; rates are quoted after a benchmark on a sample of your own records, implying a sales or evaluation step rather than a simple self-serve free tier."
+  },
+  {
+   "app": "PitchBook",
+   "why": "sales_contact",
+   "note": "Access requires a licensed PitchBook account and SSO authentication for connectors; API access is granted by the Direct Data team."
+  }
+ ],
  "effort": [
   "Salesforce",
   "Pipedrive",
-  "Twenty",
-  "Podio",
   "Close",
-  "DealCloud",
+  "Copper",
   "Front",
   "Pylon",
-  "LiveAgent",
-  "Plain",
   "Help Scout",
-  "Twilio"
+  "Gorgias",
+  "Twilio",
+  "Zoho Cliq",
+  "Pumble",
+  "Discord",
+  "WhatsApp Business",
+  "LinkedIn Ads",
+  "GoHighLevel",
+  "systeme.io",
+  "Ecwid",
+  "fanbasis",
+  "SE Ranking",
+  "Sherlock",
+  "Clay",
+  "Cloudflare",
+  "Neo4j",
+  "Snowflake",
+  "MongoDB Atlas",
+  "Smartsheet",
+  "Stripe",
+  "Binance",
+  "Paygent Connect",
+  "iPayX",
+  "Xero",
+  "NotebookLM",
+  "Otter AI",
+  "Fathom",
+  "Devin",
+  "Mermaid CLI",
+  "YouTube Transcript"
  ],
  "composio_have": [
   "Salesforce",
@@ -273,457 +553,123 @@
   "Grain"
  ],
  "unknown_rate": {
-  "auth_methods": 5,
-  "primary_auth": 2,
-  "credential_access": 5,
-  "api_type": 4,
-  "api_breadth": 8,
-  "existing_mcp": 11
+  "auth_methods": 14,
+  "primary_auth": 7,
+  "credential_access": 7,
+  "api_type": 12,
+  "api_breadth": 26,
+  "existing_mcp": 0
  },
  "defeated": [
   {
-   "app": "Salesforce",
-   "id": 1,
-   "why": "unknown: api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Twenty",
-   "id": 5,
-   "why": "unknown: auth_methods, credential_access, existing_mcp"
-  },
-  {
    "app": "Podio",
    "id": 6,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Close",
-   "id": 8,
-   "why": "unknown: api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Copper",
-   "id": 9,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Freshdesk",
-   "id": 13,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Gorgias",
-   "id": 19,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Gladly",
-   "id": 20,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Slack",
-   "id": 21,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Zoho Cliq",
-   "id": 23,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Lark (Larksuite)",
-   "id": 24,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Pumble",
-   "id": 25,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Discord",
-   "id": 26,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Telegram",
-   "id": 27,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "WhatsApp Business",
-   "id": 28,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Aircall",
-   "id": 29,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Vonage",
-   "id": 30,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Google Ads",
-   "id": 31,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Meta Ads",
-   "id": 32,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "LinkedIn Ads",
-   "id": 33,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
+   "why": "unknown: auth_methods, primary_auth, api_type"
   },
   {
    "app": "GoHighLevel",
    "id": 34,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Mailchimp",
-   "id": 35,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Klaviyo",
-   "id": 36,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "systeme.io",
-   "id": 37,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Pinterest",
-   "id": 38,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Threads (Meta)",
-   "id": 39,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "SendGrid",
-   "id": 40,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Shopify",
-   "id": 41,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "WooCommerce",
-   "id": 42,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "BigCommerce",
-   "id": 43,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Salesforce Commerce Cloud",
-   "id": 44,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Magento (Adobe Commerce)",
-   "id": 45,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Squarespace",
-   "id": 46,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Ecwid",
-   "id": 47,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Gumroad",
-   "id": 48,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Amazon Selling Partner",
-   "id": 49,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
+   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth"
   },
   {
    "app": "fanbasis",
    "id": 50,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "DataForSEO",
-   "id": 51,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "SE Ranking",
-   "id": 52,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Ahrefs",
-   "id": 53,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "MrScraper",
-   "id": 54,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Apify",
-   "id": 55,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Firecrawl",
-   "id": 56,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Bright Data",
-   "id": 57,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
+   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth"
   },
   {
    "app": "Sherlock",
    "id": 58,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Waterfall.io",
-   "id": 59,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Clay",
-   "id": 60,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "GitHub",
-   "id": 61,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Vercel",
-   "id": 62,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Netlify",
-   "id": 63,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
+   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth"
   },
   {
    "app": "Cloudflare",
    "id": 64,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Supabase",
-   "id": 65,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Neo4j",
-   "id": 66,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Snowflake",
-   "id": 67,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "MongoDB Atlas",
-   "id": 68,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Datadog",
-   "id": 69,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Sentry",
-   "id": 70,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Notion",
-   "id": 71,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Airtable",
-   "id": 72,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Linear",
-   "id": 73,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Jira",
-   "id": 74,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Asana",
-   "id": 75,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Monday.com",
-   "id": 76,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "ClickUp",
-   "id": 77,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Coda",
-   "id": 78,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Smartsheet",
-   "id": 79,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Harvest",
-   "id": 80,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Stripe",
-   "id": 81,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Plaid",
-   "id": 82,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Binance",
-   "id": 83,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Paygent Connect",
-   "id": 84,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "iPayX",
-   "id": 85,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "QuickBooks",
-   "id": 86,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Xero",
-   "id": 87,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Brex",
-   "id": 88,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Ramp",
-   "id": 89,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "PitchBook",
-   "id": 90,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "NotebookLM",
-   "id": 91,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Otter AI",
-   "id": 92,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Fathom",
-   "id": 93,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Consensus",
-   "id": 94,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Reducto",
-   "id": 95,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Devin",
-   "id": 96,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "higgsfield",
-   "id": 97,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
+   "why": "unknown: auth_methods, primary_auth, api_breadth"
   },
   {
    "app": "Mermaid CLI",
    "id": 98,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "YouTube Transcript",
-   "id": 99,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
-  },
-  {
-   "app": "Grain",
-   "id": 100,
-   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth, existing_mcp"
+   "why": "unknown: auth_methods, primary_auth, credential_access, api_type, api_breadth"
   }
  ],
  "quadrants": {
   "self-serve / broad-moderate": [
    "HubSpot",
    "Attio",
+   "Twenty",
+   "Podio",
    "Zoho CRM",
+   "DealCloud",
    "Zendesk",
-   "Intercom"
+   "Intercom",
+   "Freshdesk",
+   "LiveAgent",
+   "Plain",
+   "Slack",
+   "Lark (Larksuite)",
+   "Telegram",
+   "Vonage",
+   "Google Ads",
+   "Meta Ads",
+   "Mailchimp",
+   "Klaviyo",
+   "Pinterest",
+   "Threads (Meta)",
+   "SendGrid",
+   "WooCommerce",
+   "BigCommerce",
+   "Salesforce Commerce Cloud",
+   "Magento (Adobe Commerce)",
+   "Squarespace",
+   "Gumroad",
+   "Amazon Selling Partner",
+   "DataForSEO",
+   "Ahrefs",
+   "MrScraper",
+   "Apify",
+   "Firecrawl",
+   "Bright Data",
+   "GitHub",
+   "Vercel",
+   "Netlify",
+   "Supabase",
+   "Datadog",
+   "Sentry",
+   "Notion",
+   "Airtable",
+   "Linear",
+   "Jira",
+   "Asana",
+   "Monday.com",
+   "ClickUp",
+   "Coda",
+   "Harvest",
+   "Plaid",
+   "QuickBooks",
+   "Brex",
+   "Ramp",
+   "Consensus",
+   "Reducto",
+   "higgsfield",
+   "Grain"
+  ],
+  "gated / broad-moderate": [
+   "Help Scout",
+   "Gorgias",
+   "Aircall",
+   "LinkedIn Ads",
+   "Shopify",
+   "Waterfall.io",
+   "Smartsheet",
+   "PitchBook",
+   "Otter AI"
+  ],
+  "self-serve / narrow": [
+   "systeme.io",
+   "Clay",
+   "Neo4j",
+   "iPayX",
+   "YouTube Transcript"
   ]
  }
 }

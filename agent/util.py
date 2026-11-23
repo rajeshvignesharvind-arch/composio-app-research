@@ -25,10 +25,13 @@ def norm(s):
     s = re.sub(r"[*_`#>\[\]\\]", "", s)
     return re.sub(r"\s+"," ",s).strip().lower()
 
+class DailyCap(Exception): pass
+
 def post(url, headers, body, retries=6, timeout=90):
     for i in range(retries):
         try:
             r = httpx.post(url, headers=headers, json=body, timeout=timeout)
+            if r.status_code == 429 and 'per day' in r.text: raise DailyCap(r.text[:200])
             if r.status_code in (429,500,502,503):
                 w = float(r.headers.get('retry-after') or 2**i*3); print('retry', r.status_code, w, flush=True); time.sleep(min(w, 60)); continue
             r.raise_for_status(); return r.json()

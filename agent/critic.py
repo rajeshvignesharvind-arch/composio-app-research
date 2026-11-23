@@ -10,11 +10,22 @@ _rr = itertools.cycle(range(max(1, len(_KEYS)))); _lock = threading.Lock()
 def _next_key():
     with _lock: return _KEYS[next(_rr)] if _KEYS else key("GROQ_API_KEY")   # round-robin: keys used for quota only
 
+ALL_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
 def groq_raw(model, sys, user):
-    r = post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {_next_key()}"},
-             {"model": model, "temperature": 0, **({"reasoning_effort": "low"} if "gpt-oss" in model else {}),
-              "response_format": {"type": "json_object"}, "messages": [{"role": "system", "content": sys}, {"role": "user", "content": user}]})
-    return json.loads(r["choices"][0]["message"]["content"])
+    """Try requested model on each key (round-robin start); on a daily-token cap fall through to the next key, then the next model. Daily caps only."""
+    from .util import DailyCap
+    combos = [(m, k) for m in [model] + [x for x in ALL_MODELS if x != model] for k in (_KEYS or [key("GROQ_API_KEY")])]
+    start = next(_rr) if len(_KEYS) > 1 else 0
+    combos = combos[start:] + combos[:start] if start else combos
+    last = None
+    for m, k in combos:
+        try:
+            r = post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {k}"},
+                     {"model": m, "temperature": 0, **({"reasoning_effort": "low"} if "gpt-oss" in m else {}),
+                      "response_format": {"type": "json_object"}, "messages": [{"role": "system", "content": sys}, {"role": "user", "content": user}]})
+            return json.loads(r["choices"][0]["message"]["content"])
+        except DailyCap as e: last = e; continue
+    raise last
 
 FIELDS = ["auth_methods", "primary_auth", "credential_access", "api_type", "api_breadth", "existing_mcp"]
 DEFS = ("credential_access = cheapest path for a developer to get WORKING credentials (free sandbox/trial/free tier = self_serve; credentials only via sales, a paying customer's admin, or a partner programme = gated). "

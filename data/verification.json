@@ -1,0 +1,937 @@
+{
+ "passes": [
+  {
+   "name": "Pass 1: extractor",
+   "what": "Groq LLM reads 5 pages; every value needs a grounded quote",
+   "overall": {
+    "correct": 63,
+    "n": 160,
+    "pct": 39.4
+   },
+   "per_field": {
+    "auth_methods": {
+     "correct": 6,
+     "n": 20
+    },
+    "primary_auth": {
+     "correct": 9,
+     "n": 20
+    },
+    "credential_access": {
+     "correct": 8,
+     "n": 20
+    },
+    "api_type": {
+     "correct": 14,
+     "n": 20
+    },
+    "api_breadth": {
+     "correct": 9,
+     "n": 20
+    },
+    "existing_mcp": {
+     "correct": 5,
+     "n": 20
+    },
+    "buildability": {
+     "correct": 6,
+     "n": 20
+    },
+    "main_blocker": {
+     "correct": 6,
+     "n": 20
+    }
+   }
+  },
+  {
+   "name": "Pass 2: critic loop",
+   "what": "other model re-checks, live re-fetch, adversarial search, targeted re-research",
+   "overall": {
+    "correct": 64,
+    "n": 160,
+    "pct": 40.0
+   },
+   "per_field": {
+    "auth_methods": {
+     "correct": 6,
+     "n": 20
+    },
+    "primary_auth": {
+     "correct": 10,
+     "n": 20
+    },
+    "credential_access": {
+     "correct": 8,
+     "n": 20
+    },
+    "api_type": {
+     "correct": 14,
+     "n": 20
+    },
+    "api_breadth": {
+     "correct": 7,
+     "n": 20
+    },
+    "existing_mcp": {
+     "correct": 5,
+     "n": 20
+    },
+    "buildability": {
+     "correct": 7,
+     "n": 20
+    },
+    "main_blocker": {
+     "correct": 7,
+     "n": 20
+    }
+   }
+  },
+  {
+   "name": "Pass 3: deterministic checks",
+   "what": "enum normalisation + MCP detector (who published the hit)",
+   "overall": {
+    "correct": 72,
+    "n": 160,
+    "pct": 45.0
+   },
+   "per_field": {
+    "auth_methods": {
+     "correct": 6,
+     "n": 20
+    },
+    "primary_auth": {
+     "correct": 10,
+     "n": 20
+    },
+    "credential_access": {
+     "correct": 8,
+     "n": 20
+    },
+    "api_type": {
+     "correct": 14,
+     "n": 20
+    },
+    "api_breadth": {
+     "correct": 7,
+     "n": 20
+    },
+    "existing_mcp": {
+     "correct": 13,
+     "n": 20
+    },
+    "buildability": {
+     "correct": 7,
+     "n": 20
+    },
+    "main_blocker": {
+     "correct": 7,
+     "n": 20
+    }
+   }
+  }
+ ],
+ "misses": [
+  {
+   "id": 1,
+   "app": "Salesforce",
+   "field": "api_type",
+   "agent": [
+    "rest"
+   ],
+   "truth": [
+    "rest",
+    "graphql"
+   ],
+   "evidence": [
+    "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/overview"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 1,
+   "app": "Salesforce",
+   "field": "api_breadth",
+   "agent": "unknown",
+   "truth": "broad",
+   "evidence": [
+    "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/overview"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "field": "auth_methods",
+   "agent": [
+    "oauth2",
+    "api_key"
+   ],
+   "truth": [
+    "oauth2"
+   ],
+   "evidence": [
+    "https://api.docs.dealcloud.com/docs/token"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "field": "credential_access",
+   "agent": "self_serve_trial",
+   "truth": "sales_contact",
+   "evidence": [
+    "https://api.docs.dealcloud.com/docs/token"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 10,
+   "app": "DealCloud",
+   "field": "api_breadth",
+   "agent": "moderate",
+   "truth": "broad",
+   "evidence": [
+    "https://api.docs.dealcloud.com/docs/token"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 11,
+   "app": "Zendesk",
+   "field": "auth_methods",
+   "agent": [
+    "basic",
+    "api_key",
+    "oauth2",
+    "bearer_token"
+   ],
+   "truth": [
+    "oauth2",
+    "basic"
+   ],
+   "evidence": [
+    "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 20,
+   "app": "Gladly",
+   "field": "auth_methods",
+   "agent": "unknown",
+   "truth": [
+    "basic"
+   ],
+   "evidence": [
+    "https://developer.gladly.com/rest/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 20,
+   "app": "Gladly",
+   "field": "primary_auth",
+   "agent": "oauth2",
+   "truth": "basic",
+   "evidence": [
+    "https://developer.gladly.com/rest/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 20,
+   "app": "Gladly",
+   "field": "credential_access",
+   "agent": "partner_gated",
+   "truth": "sales_contact",
+   "evidence": [
+    "https://developer.gladly.com/rest/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 20,
+   "app": "Gladly",
+   "field": "api_breadth",
+   "agent": "unknown",
+   "truth": "moderate",
+   "evidence": [
+    "https://developer.gladly.com/rest/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 20,
+   "app": "Gladly",
+   "field": "existing_mcp",
+   "agent": "official",
+   "truth": "none_found",
+   "evidence": [
+    "https://developer.gladly.com/rest/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 21,
+   "app": "Slack",
+   "field": "api_type",
+   "agent": [
+    "rest"
+   ],
+   "truth": [
+    "rest",
+    "websocket"
+   ],
+   "evidence": [
+    "https://docs.slack.dev/ai/mcp-server"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 25,
+   "app": "Pumble",
+   "field": "auth_methods",
+   "agent": [
+    "api_key",
+    "bearer_token"
+   ],
+   "truth": [
+    "api_key"
+   ],
+   "evidence": [
+    "https://pumble.com/learn/pumble/ai-automation-guide/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 25,
+   "app": "Pumble",
+   "field": "credential_access",
+   "agent": "unknown",
+   "truth": "self_serve_free",
+   "evidence": [
+    "https://pumble.com/learn/pumble/ai-automation-guide/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 31,
+   "app": "Google Ads",
+   "field": "auth_methods",
+   "agent": [
+    "oauth2",
+    "jwt_service_account"
+   ],
+   "truth": [
+    "oauth2"
+   ],
+   "evidence": [
+    "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 31,
+   "app": "Google Ads",
+   "field": "credential_access",
+   "agent": "self_serve_free",
+   "truth": "admin_approval",
+   "evidence": [
+    "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 31,
+   "app": "Google Ads",
+   "field": "api_type",
+   "agent": [
+    "rest"
+   ],
+   "truth": [
+    "rest",
+    "grpc"
+   ],
+   "evidence": [
+    "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "field": "api_breadth",
+   "agent": "narrow",
+   "truth": "moderate",
+   "evidence": [
+    "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 37,
+   "app": "systeme.io",
+   "field": "existing_mcp",
+   "agent": "official",
+   "truth": "none_found",
+   "evidence": [
+    "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 41,
+   "app": "Shopify",
+   "field": "credential_access",
+   "agent": "partner_gated",
+   "truth": "self_serve_free",
+   "evidence": [
+    "https://shopify.dev/docs/api"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "auth_methods",
+   "agent": "unknown",
+   "truth": [
+    "api_key"
+   ],
+   "evidence": [
+    "https://commasdocs.com/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "primary_auth",
+   "agent": "unknown",
+   "truth": "api_key",
+   "evidence": [
+    "https://commasdocs.com/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "credential_access",
+   "agent": "unknown",
+   "truth": "self_serve_free",
+   "evidence": [
+    "https://commasdocs.com/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "api_type",
+   "agent": "unknown",
+   "truth": [
+    "rest"
+   ],
+   "evidence": [
+    "https://commasdocs.com/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "api_breadth",
+   "agent": "unknown",
+   "truth": "moderate",
+   "evidence": [
+    "https://commasdocs.com/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 50,
+   "app": "fanbasis",
+   "field": "existing_mcp",
+   "agent": "community",
+   "truth": "none_found",
+   "evidence": [
+    "https://commasdocs.com/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "auth_methods",
+   "agent": [
+    "api_key"
+   ],
+   "truth": [
+    "bearer_token"
+   ],
+   "evidence": [
+    "https://docs.ahrefs.com/en/api/docs/introduction"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "primary_auth",
+   "agent": "api_key",
+   "truth": "bearer_token",
+   "evidence": [
+    "https://docs.ahrefs.com/en/api/docs/introduction"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 53,
+   "app": "Ahrefs",
+   "field": "credential_access",
+   "agent": "self_serve_trial",
+   "truth": "paid_plan",
+   "evidence": [
+    "https://docs.ahrefs.com/en/api/docs/introduction"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "auth_methods",
+   "agent": [
+    "bearer_token"
+   ],
+   "truth": [
+    "api_key"
+   ],
+   "evidence": [
+    "https://docs.mrscraper.com"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "primary_auth",
+   "agent": "bearer_token",
+   "truth": "api_key",
+   "evidence": [
+    "https://docs.mrscraper.com"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "api_breadth",
+   "agent": "moderate",
+   "truth": "narrow",
+   "evidence": [
+    "https://docs.mrscraper.com"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 54,
+   "app": "MrScraper",
+   "field": "existing_mcp",
+   "agent": "official",
+   "truth": "none_found",
+   "evidence": [
+    "https://docs.mrscraper.com"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 61,
+   "app": "GitHub",
+   "field": "auth_methods",
+   "agent": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "truth": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+   ],
+   "evidence": [
+    "https://docs.github.com/rest"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 61,
+   "app": "GitHub",
+   "field": "credential_access",
+   "agent": "self_serve_trial",
+   "truth": "self_serve_free",
+   "evidence": [
+    "https://docs.github.com/rest"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 61,
+   "app": "GitHub",
+   "field": "api_type",
+   "agent": [
+    "rest"
+   ],
+   "truth": [
+    "rest",
+    "graphql"
+   ],
+   "evidence": [
+    "https://docs.github.com/rest"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 66,
+   "app": "Neo4j",
+   "field": "auth_methods",
+   "agent": [
+    "basic",
+    "bearer_token"
+   ],
+   "truth": [
+    "oauth2",
+    "basic"
+   ],
+   "evidence": [
+    "https://neo4j.com/docs/aura/classic/platform/api/overview/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 66,
+   "app": "Neo4j",
+   "field": "primary_auth",
+   "agent": "other",
+   "truth": "oauth2",
+   "evidence": [
+    "https://neo4j.com/docs/aura/classic/platform/api/overview/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 66,
+   "app": "Neo4j",
+   "field": "api_breadth",
+   "agent": "narrow",
+   "truth": "moderate",
+   "evidence": [
+    "https://neo4j.com/docs/aura/classic/platform/api/overview/"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "field": "primary_auth",
+   "agent": "bearer_token",
+   "truth": "oauth2",
+   "evidence": [
+    "https://developers.notion.com"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 71,
+   "app": "Notion",
+   "field": "api_breadth",
+   "agent": "broad",
+   "truth": "moderate",
+   "evidence": [
+    "https://developers.notion.com"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 73,
+   "app": "Linear",
+   "field": "auth_methods",
+   "agent": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "truth": [
+    "oauth2",
+    "api_key"
+   ],
+   "evidence": [
+    "https://linear.app/developers"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 73,
+   "app": "Linear",
+   "field": "api_breadth",
+   "agent": "moderate",
+   "truth": "broad",
+   "evidence": [
+    "https://linear.app/developers"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 81,
+   "app": "Stripe",
+   "field": "primary_auth",
+   "agent": "api_key",
+   "truth": "oauth2",
+   "evidence": [
+    "https://docs.stripe.com/mcp"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 81,
+   "app": "Stripe",
+   "field": "credential_access",
+   "agent": "unknown",
+   "truth": "self_serve_free",
+   "evidence": [
+    "https://docs.stripe.com/mcp"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 81,
+   "app": "Stripe",
+   "field": "api_breadth",
+   "agent": "unknown",
+   "truth": "broad",
+   "evidence": [
+    "https://docs.stripe.com/mcp"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 81,
+   "app": "Stripe",
+   "field": "existing_mcp",
+   "agent": "community",
+   "truth": "official",
+   "evidence": [
+    "https://docs.stripe.com/mcp"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "field": "auth_methods",
+   "agent": [
+    "oauth2",
+    "bearer_token"
+   ],
+   "truth": [
+    "api_key"
+   ],
+   "evidence": [
+    "https://docs.nmi.com/reference/nmi-gateway-features"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "field": "primary_auth",
+   "agent": "oauth2",
+   "truth": "api_key",
+   "evidence": [
+    "https://docs.nmi.com/reference/nmi-gateway-features"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "field": "credential_access",
+   "agent": "self_serve_trial",
+   "truth": "sales_contact",
+   "evidence": [
+    "https://docs.nmi.com/reference/nmi-gateway-features"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "field": "api_breadth",
+   "agent": "unknown",
+   "truth": "moderate",
+   "evidence": [
+    "https://docs.nmi.com/reference/nmi-gateway-features"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 84,
+   "app": "Paygent Connect",
+   "field": "existing_mcp",
+   "agent": "official",
+   "truth": "none_found",
+   "evidence": [
+    "https://docs.nmi.com/reference/nmi-gateway-features"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "auth_methods",
+   "agent": [
+    "bearer_token"
+   ],
+   "truth": [
+    "api_key"
+   ],
+   "evidence": [
+    "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "primary_auth",
+   "agent": "bearer_token",
+   "truth": "api_key",
+   "evidence": [
+    "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "credential_access",
+   "agent": "paid_plan",
+   "truth": "sales_contact",
+   "evidence": [
+    "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 92,
+   "app": "Otter AI",
+   "field": "api_breadth",
+   "agent": "moderate",
+   "truth": "narrow",
+   "evidence": [
+    "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "auth_methods",
+   "agent": [
+    "api_key"
+   ],
+   "truth": [
+    "oauth2"
+   ],
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "primary_auth",
+   "agent": "api_key",
+   "truth": "oauth2",
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "credential_access",
+   "agent": "self_serve_free",
+   "truth": "paid_plan",
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "api_type",
+   "agent": "unknown",
+   "truth": [
+    "cli_only"
+   ],
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "api_breadth",
+   "agent": "moderate",
+   "truth": "narrow",
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "caught_by": "not caught"
+  },
+  {
+   "id": 97,
+   "app": "higgsfield",
+   "field": "existing_mcp",
+   "agent": "official",
+   "truth": "none_found",
+   "evidence": [
+    "https://higgsfield.ai/cli"
+   ],
+   "caught_by": "not caught"
+  }
+ ],
+ "fixes": [
+  "Salesforce \u00b7 api_type: unknown \u2192 ['rest'] (unknown); gold says ['rest', 'graphql'] \u2014 changed but still wrong",
+  "Salesforce \u00b7 existing_mcp: unknown \u2192 none_found (unknown); gold says official \u2014 changed but still wrong",
+  "Salesforce \u00b7 existing_mcp: none_found \u2192 official (detector); gold says official \u2014 fixed",
+  "DealCloud \u00b7 auth_methods: unknown \u2192 oauth2,api_key (unknown); gold says ['oauth2'] \u2014 changed but still wrong",
+  "DealCloud \u00b7 credential_access: unknown \u2192 self_serve_trial (unknown); gold says sales_contact \u2014 changed but still wrong",
+  "DealCloud \u00b7 api_type: ['rest'] \u2192 rest (judge); gold says ['rest'] \u2014 broke a correct value",
+  "Zendesk \u00b7 existing_mcp: unknown \u2192 official (detector); gold says official \u2014 fixed",
+  "Gladly \u00b7 credential_access: self_serve_trial \u2192 partner_gated (judge); gold says sales_contact \u2014 changed but still wrong",
+  "Gladly \u00b7 existing_mcp: community \u2192 official (detector); gold says none_found \u2014 changed but still wrong",
+  "Slack \u00b7 existing_mcp: unknown \u2192 official (adversarial-search); gold says official \u2014 fixed",
+  "Pumble \u00b7 primary_auth: bearer_token \u2192 api_key (judge); gold says api_key \u2014 fixed",
+  "Google Ads \u00b7 existing_mcp: unknown \u2192 none_found (unknown); gold says official \u2014 changed but still wrong",
+  "Google Ads \u00b7 existing_mcp: none_found \u2192 official (detector); gold says official \u2014 fixed",
+  "Shopify \u00b7 primary_auth: unknown \u2192 oauth2 (unknown); gold says oauth2 \u2014 fixed",
+  "Shopify \u00b7 credential_access: self_serve_free \u2192 partner_gated (adversarial); gold says self_serve_free \u2014 broke a correct value",
+  "fanbasis \u00b7 existing_mcp: unknown \u2192 official (adversarial-search); gold says none_found \u2014 changed but still wrong",
+  "fanbasis \u00b7 existing_mcp: official \u2192 community (detector); gold says none_found \u2014 changed but still wrong",
+  "Ahrefs \u00b7 auth_methods: ['api_key', 'oauth2'] \u2192 ['api_key'] (judge); gold says ['bearer_token'] \u2014 changed but still wrong",
+  "Ahrefs \u00b7 primary_auth: oauth2 \u2192 api_key (judge); gold says bearer_token \u2014 changed but still wrong",
+  "Ahrefs \u00b7 existing_mcp: official \u2192 none_found (judge); gold says official \u2014 broke a correct value",
+  "Ahrefs \u00b7 credential_access: self_serve_free \u2192 self_serve_trial (adversarial); gold says paid_plan \u2014 changed but still wrong",
+  "Ahrefs \u00b7 existing_mcp: none_found \u2192 official (detector); gold says official \u2014 fixed",
+  "MrScraper \u00b7 existing_mcp: community \u2192 official (detector); gold says none_found \u2014 changed but still wrong",
+  "GitHub \u00b7 credential_access: self_serve_free \u2192 self_serve_trial (adversarial); gold says self_serve_free \u2014 broke a correct value",
+  "GitHub \u00b7 existing_mcp: official \u2192 none_found (adversarial); gold says official \u2014 broke a correct value"
+ ],
+ "unknown_share": "13 of 88 remaining misses are 'unknown' (agent could not ground an answer in the snippets it saw); the rest are wrong values or taxonomy judgement calls.",
+ "caveat": "Gold set n=20 (160 field checks), so each pass has roughly \u00b18 point uncertainty. The gold answers were drafted by Claude from live docs and are being confirmed by a human; where the human disagrees, scores are recomputed. Pass 2 and 3 changed 179+ fields across all 100 apps; only the 20 gold apps are scored."
+}

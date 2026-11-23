@@ -1,0 +1,402 @@
+{
+ "1": [
+  "official",
+  "https://developer.salesforce.com/docs/platform/sfdx-dev/guide/sfdx-dev-mcp.html"
+ ],
+ "2": [
+  "official",
+  "https://developers.hubspot.com/ai-tools/mcp"
+ ],
+ "3": [
+  "official",
+  "https://devcommunity.pipedrive.com/t/open-source-pipedrive-mcp-server-155-tools-v2-first-mit/20392"
+ ],
+ "4": [
+  "official",
+  "https://docs.attio.com/mcp/overview"
+ ],
+ "5": [
+  "community",
+  "https://github.com/mhenry3164/twenty-crm-mcp-server"
+ ],
+ "6": [
+  "none_found",
+  null
+ ],
+ "7": [
+  "official",
+  "https://www.zoho.com/crm/developer/docs/mcp/overview.html"
+ ],
+ "8": [
+  "community",
+  "https://github.com/spring-projects/spring-ai/issues/2831"
+ ],
+ "9": [
+  "official",
+  "https://www.copper.com/mcp"
+ ],
+ "10": [
+  "official",
+  "https://api.docs.dealcloud.com/mcp/tools"
+ ],
+ "11": [
+  "official",
+  "https://www.zendesk.com/marketplace/apps/support/1191848/mcp-server"
+ ],
+ "12": [
+  "official",
+  "https://www.intercom.com/integrations/connectors/intercom-mcp-server"
+ ],
+ "13": [
+  "official",
+  "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-"
+ ],
+ "14": [
+  "official",
+  "https://help.front.com/en/articles/5038272"
+ ],
+ "15": [
+  "official",
+  "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp"
+ ],
+ "16": [
+  "official",
+  "https://support.liveagent.com/150554-AI-features"
+ ],
+ "17": [
+  "official",
+  "https://www.plain.com/changelog/plain-mcp"
+ ],
+ "18": [
+  "official",
+  "https://articles.helpscout.com/blog/introducing-help-scout-mcp"
+ ],
+ "19": [
+  "official",
+  "https://updates.gorgias.com/publications/gorgias-is-now-an-official-connector-in-claude-and-chatgpt"
+ ],
+ "20": [
+  "official",
+  "https://help.gladly.com/docs/what-are-mcp-connections"
+ ],
+ "21": [
+  "official",
+  "https://docs.slack.dev/ai/slack-mcp-server"
+ ],
+ "22": [
+  "official",
+  "https://www.twilio.com/docs/mcp"
+ ],
+ "23": [
+  "official",
+  "https://www.zoho.com/cliq/mcp-server.html"
+ ],
+ "24": [
+  "official",
+  "https://github.com/larksuite/lark-openapi-mcp"
+ ],
+ "25": [
+  "official",
+  "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server"
+ ],
+ "26": [
+  "community",
+  "https://github.com/v-3/discordmcp"
+ ],
+ "27": [
+  "community",
+  "https://github.com/chigwell/telegram-mcp"
+ ],
+ "28": [
+  "official",
+  "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp"
+ ],
+ "29": [
+  "official",
+  "https://support.aircall.io/en-gb/articles/39677926959517"
+ ],
+ "30": [
+  "official",
+  "https://github.com/Vonage/vonage-mcp-server-documentation"
+ ],
+ "31": [
+  "official",
+  "https://www.adspirer.com/blog/google-ads-mcp"
+ ],
+ "32": [
+  "official",
+  "https://www.facebook.com/business/tools/ads-mcp-server"
+ ],
+ "33": [
+  "community",
+  "https://github.com/danielpopamd/linkedin-ads-mcp"
+ ],
+ "34": [
+  "official",
+  "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server"
+ ],
+ "35": [
+  "official",
+  "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server"
+ ],
+ "36": [
+  "official",
+  "https://www.klaviyo.com/solutions/ai/klaviyo-mcp-server"
+ ],
+ "37": [
+  "official",
+  "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp"
+ ],
+ "38": [
+  "community",
+  "https://github.com/terryso/mcp-pinterest"
+ ],
+ "39": [
+  "official",
+  "https://developers.facebook.com/documentation/mcp/devtools-mcp"
+ ],
+ "40": [
+  "community",
+  "https://github.com/Garoth/sendgrid-mcp"
+ ],
+ "41": [
+  "official",
+  "https://shopify.dev/changelog/posts/mcp-server-for-the-shopify-dev-assistant"
+ ],
+ "42": [
+  "official",
+  "https://mcpforwoocommerce.com"
+ ],
+ "43": [
+  "official",
+  "https://docs.bigcommerce.com/developer/docs/ai-agent-setup"
+ ],
+ "44": [
+  "official",
+  "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/agentic-mcp-shopper-tools-quick-start.html"
+ ],
+ "45": [
+  "community",
+  "https://github.com/rafaelstz/adobe-commerce-dev-mcp"
+ ],
+ "46": [
+  "official",
+  "https://developers.squarespace.com/mcp/overview"
+ ],
+ "47": [
+  "none_found",
+  null
+ ],
+ "48": [
+  "official",
+  "https://gumroad.com/mcp"
+ ],
+ "49": [
+  "official",
+  "https://docs.aws.amazon.com/partner-central/latest/developer-guide/mcp-getting-started.html"
+ ],
+ "50": [
+  "community",
+  "https://mcpservers.org"
+ ],
+ "51": [
+  "official",
+  "https://dataforseo.com/help-center/setting-up-the-official-dataforseo-mcp-server-simple-guide"
+ ],
+ "52": [
+  "official",
+  "https://seranking.com/mcp.html"
+ ],
+ "53": [
+  "official",
+  "https://docs.ahrefs.com/en/mcp/docs/introduction"
+ ],
+ "54": [
+  "official",
+  "https://mrscraper.com/blog/mcp-server-web-scraping"
+ ],
+ "55": [
+  "official",
+  "https://github.com/apify/apify-mcp-server"
+ ],
+ "56": [
+  "official",
+  "https://github.com/firecrawl/firecrawl-mcp-server"
+ ],
+ "57": [
+  "official",
+  "https://github.com/brightdata/brightdata-mcp"
+ ],
+ "58": [
+  "community",
+  "https://github.com/Burnsedia/sherlock-mcp"
+ ],
+ "59": [
+  "community",
+  "https://github.com/ever-works/awesome-mcp-servers/blob/master/details/fullenrich-mcp-server.md"
+ ],
+ "60": [
+  "community",
+  "https://mcp.so/servers/clay-mcp"
+ ],
+ "61": [
+  "official",
+  "https://github.blog/ai-and-ml/generative-ai/a-practical-guide-on-how-to-use-the-github-mcp-server"
+ ],
+ "62": [
+  "official",
+  "https://vercel.com/docs/mcp"
+ ],
+ "63": [
+  "official",
+  "https://www.netlify.com/blog/netlify-mcp-server-ai-agents-deploy-your-code"
+ ],
+ "64": [
+  "official",
+  "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare"
+ ],
+ "65": [
+  "official",
+  "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server"
+ ],
+ "66": [
+  "official",
+  "https://github.com/neo4j/mcp"
+ ],
+ "67": [
+  "official",
+  "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+ ],
+ "68": [
+  "official",
+  "https://www.mongodb.com/company/blog/product-release-announcements/mongodb-for-agentic-era-built-for-developers-ai-agents"
+ ],
+ "69": [
+  "official",
+  "https://www.datadoghq.com/blog/datadog-remote-mcp-server"
+ ],
+ "70": [
+  "official",
+  "https://mcp.sentry.dev"
+ ],
+ "71": [
+  "official",
+  "https://developers.notion.com/guides/mcp/get-started-with-mcp"
+ ],
+ "72": [
+  "official",
+  "https://www.airtable.com/articles/mcp-server-interfaces-automations"
+ ],
+ "73": [
+  "official",
+  "https://linear.app/docs/mcp"
+ ],
+ "74": [
+  "official",
+  "https://community.atlassian.com/forums/discussion/3241874/jira-mcp-explained-what-it-does-what-it-doesn-t-and-how-to-use-it"
+ ],
+ "75": [
+  "official",
+  "https://developers.asana.com/docs/using-asanas-mcp-server"
+ ],
+ "76": [
+  "official",
+  "https://github.com/mondaycom/mcp"
+ ],
+ "77": [
+  "official",
+  "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+ ],
+ "78": [
+  "official",
+  "https://coda.io/resources/guides/getting_started_with_coda_mcp"
+ ],
+ "79": [
+  "official",
+  "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server"
+ ],
+ "80": [
+  "official",
+  "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
+ ],
+ "81": [
+  "community",
+  "https://www.scalekit.com/blog/stripe-mcp-vs-api"
+ ],
+ "82": [
+  "official",
+  "https://plaid.com/docs/resources/mcp"
+ ],
+ "83": [
+  "official",
+  "https://www.binance.com/en-ZA/agent-os"
+ ],
+ "84": [
+  "official",
+  "https://paygent.net"
+ ],
+ "85": [
+  "community",
+  "https://mcp.so/servers/mcp-fx-audit-ipayx-stellar"
+ ],
+ "86": [
+  "official",
+  "https://github.com/intuit/quickbooks-online-mcp-server"
+ ],
+ "87": [
+  "official",
+  "https://developer.xero.com/documentation/guides/remote-mcp/overview"
+ ],
+ "88": [
+  "official",
+  "https://www.brex.com/journal/brex-mcp-connect-brex-to-ai-tools"
+ ],
+ "89": [
+  "official",
+  "https://builders.ramp.com/post/ramp-mcp"
+ ],
+ "90": [
+  "official",
+  "https://pitchbook.com/media/press-releases/pitchbook-announces-new-essential-mcp-integration-with-perplexity-expanding-access-to-ai-powered-verifiable-market-intelligence"
+ ],
+ "91": [
+  "community",
+  "https://github.com/PleasePrompto/notebooklm-mcp"
+ ],
+ "92": [
+  "official",
+  "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+ ],
+ "93": [
+  "official",
+  "https://www.fathom.ai/features/mcp-server"
+ ],
+ "94": [
+  "official",
+  "https://support.goconsensus.com/mcp-server-security-information"
+ ],
+ "95": [
+  "official",
+  "https://docs.reducto.ai/quickstart"
+ ],
+ "96": [
+  "official",
+  "https://docs.devin.ai/work-with-devin/devin-mcp"
+ ],
+ "97": [
+  "official",
+  "https://higgsfield.ai/cli"
+ ],
+ "98": [
+  "community",
+  "https://github.com/andrewginns/mermaid-mcp-server"
+ ],
+ "99": [
+  "official",
+  "https://youtube-transcript.ai/mcp"
+ ],
+ "100": [
+  "official",
+  "https://support.grain.com/en/articles/14811968-grain-mcp"
+ ]
+}
