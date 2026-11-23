@@ -1,47 +1,46 @@
-"""Pass 2: a different model family (Groq) judges each field against its quote + a live re-fetch, plus adversarial questions."""
+"""Pass 2. A different model than the extractor checks the extractor's claims (cheap, batched), with free code checks first."""
 import json, os
 from .util import key, post, norm
 from .fetch import scrape, search
-
-def groq(sys, user, model=None): return groq_raw(model or os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b"), sys, user)
+from .extract import critic_for, quote_ok
 
 def groq_raw(model, sys, user):
     r = post("https://api.groq.com/openai/v1/chat/completions", {"Authorization": f"Bearer {key('GROQ_API_KEY')}"},
-             {"model": model, "temperature": 0, **({"reasoning_effort": "low"} if "gpt-oss" in model else {}), "response_format": {"type": "json_object"},
-              "messages": [{"role": "system", "content": sys}, {"role": "user", "content": user}]})
+             {"model": model, "temperature": 0, **({"reasoning_effort": "low"} if "gpt-oss" in model else {}),
+              "response_format": {"type": "json_object"}, "messages": [{"role": "system", "content": sys}, {"role": "user", "content": user}]})
     return json.loads(r["choices"][0]["message"]["content"])
 
-SYS = "You are a strict fact-checker. Reply JSON: {\"verdict\":\"supported|unsupported|contradicted\",\"reason\":\"...\"}."
-
-def judge_field(app, name, f, page_text, model=None):
-    return groq(SYS, f"App: {app}\nField: {name}\nClaimed value: {f['value']}\nQuote: {f.get('quote')}\nPage excerpt:\n{page_text[:1800]}\nDoes the page support the claimed value for this field?", model)
-
-ADV = {
- "credential_access": "Is there a free developer sandbox/trial or self-serve signup that the claim missed, or is access actually limited to approved partners / paid tiers?",
- "existing_mcp": "Is the MCP server published by the vendor itself (official) or by a third party (community)?",
- "auth_methods": "Does the public API really accept every listed method, and are any missing (e.g. OAuth2 for third parties)?",
-}
+FIELDS = ["auth_methods", "primary_auth", "credential_access", "api_type", "api_breadth", "existing_mcp"]
+DEFS = ("credential_access = cheapest path for a developer to get WORKING credentials (free sandbox/trial/free tier = self_serve; credentials only via sales, a paying customer's admin, or a partner programme = gated). "
+        "existing_mcp = official only if published by the vendor itself.")
 
 def critique(app, rec, app_id=0):
-    from .extract import critic_for
-    cm = critic_for(app_id)
-    """Return list of flagged fields with notes (re-fetch + judge + adversarial search)."""
-    flags = []
-    for k in ["auth_methods", "primary_auth", "credential_access", "api_type", "api_breadth", "existing_mcp"]:
+    cm = critic_for(app_id); flags = []
+    # 1. free checks: unknown/ungrounded, live re-fetch of the cited page, consistency rules
+    for k in FIELDS:
         f = rec.get(k) or {}
-        if f.get("value") == "unknown":
-            flags.append({"field": k, "note": "value unknown/ungrounded; look harder", "kind": "unknown"}); continue
+        if f.get("value") in ("unknown", None):
+            flags.append({"field": k, "note": f"agent could not ground a value (it proposed {f.get('ungrounded_value')!r})" if f.get("ungrounded_value") else "no value found", "kind": "unknown"}); continue
         url = f.get("evidence_url")
-        live = scrape(url)["text"] if url else ""
-        if f.get("quote") and norm(f["quote"]) not in norm(live):
-            flags.append({"field": k, "note": "quote not found on live re-fetch", "kind": "refetch"}); continue
-        v = judge_field(app, k, f, live, cm)
-        if v.get("verdict") != "supported": flags.append({"field": k, "note": v.get("reason", ""), "kind": "judge"})
-    for k, q in ADV.items():
-        hits = search(f"{app} {q}", 3)
-        ctx = "\n".join(f"{h['url']}: {h['snippet']}" for h in hits)
-        v = groq("Reply JSON {\"change_needed\":true|false,\"reason\":\"...\"}.",
-                 f"App {app}. Current {k}={rec.get(k,{}).get('value')}. Question: {q}\nSearch results:\n{ctx}", cm)
-        if v.get("change_needed"): flags.append({"field": k, "note": v.get("reason", ""), "kind": "adversarial", "extra_urls": [h['url'] for h in hits]})
+        if url and f.get("quote"):
+            live = scrape(url)["text"]
+            if live and not quote_ok(f["quote"], live): flags.append({"field": k, "note": "quote not found on live re-fetch", "kind": "refetch"})
     for fl in rec.get("flags", []): flags.append({"field": fl, "note": "consistency rule", "kind": "rule"})
+    # 2. one batched judge call (other model): does each quote support its value?
+    claims = {k: {"value": rec[k]["value"], "quote": (rec[k].get("quote") or "")[:220]} for k in FIELDS if isinstance(rec.get(k), dict) and rec[k].get("value") not in ("unknown", None)}
+    if claims:
+        v = groq_raw(cm, 'You are a strict fact-checker. Reply JSON {"<field>": {"verdict":"supported|unsupported|contradicted","reason":"<=20 words"}} for every field given. ' + DEFS,
+                     f"App: {app}\nClaims with the quote each rests on:\n{json.dumps(claims)}")
+        for k, x in (v or {}).items():
+            if isinstance(x, dict) and x.get("verdict") in ("unsupported", "contradicted") and k in claims:
+                flags.append({"field": k, "note": x.get("reason", ""), "kind": "judge"})
+    # 3. adversarial: independent search for the two fields extractors get wrong most
+    hits = search(f"{app} developer API free sandbox OR trial OR partner program OR sales access", 3) + search(f"{app} official MCP server", 3)
+    ctx = "\n".join(f"{h['url']}: {h['snippet'][:260]}" for h in hits)
+    cur = {k: rec.get(k, {}).get("value") for k in ("credential_access", "existing_mcp")}
+    v = groq_raw(cm, 'Be sceptical. Reply JSON {"credential_access":{"change":true|false,"to":"<enum or null>","reason":"..."},"existing_mcp":{"change":true|false,"to":"official|community|none_found|null","reason":"..."}}. Only say change=true if the search results clearly show it. ' + DEFS,
+                 f"App {app}. Current: {json.dumps(cur)}\nSearch results:\n{ctx}")
+    for k, x in (v or {}).items():
+        if isinstance(x, dict) and x.get("change") and k in cur:
+            flags.append({"field": k, "note": x.get("reason", ""), "kind": "adversarial", "suggest": x.get("to"), "extra_urls": [h["url"] for h in hits[:4]]})
     return flags

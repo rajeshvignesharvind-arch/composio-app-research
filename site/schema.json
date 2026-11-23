@@ -1,0 +1,71 @@
+{
+ "fields": {
+  "auth_methods": [
+   "oauth2",
+   "api_key",
+   "bearer_token",
+   "basic",
+   "jwt_service_account",
+   "hmac_signature",
+   "session_cookie",
+   "none",
+   "other"
+  ],
+  "primary_auth": [
+   "oauth2",
+   "api_key",
+   "bearer_token",
+   "basic",
+   "jwt_service_account",
+   "hmac_signature",
+   "session_cookie",
+   "none",
+   "other"
+  ],
+  "credential_access": [
+   "self_serve_free",
+   "self_serve_trial",
+   "paid_plan",
+   "admin_approval",
+   "partner_gated",
+   "sales_contact",
+   "no_public_api"
+  ],
+  "api_type": [
+   "rest",
+   "graphql",
+   "grpc",
+   "websocket",
+   "sdk_only",
+   "cli_only",
+   "none"
+  ],
+  "api_breadth": [
+   "broad",
+   "moderate",
+   "narrow"
+  ],
+  "existing_mcp": [
+   "official",
+   "community",
+   "none_found"
+  ],
+  "buildability": [
+   "ready_now",
+   "buildable_with_effort",
+   "blocked"
+  ],
+  "main_blocker": [
+   "none",
+   "partner_approval",
+   "paid_plan",
+   "app_review",
+   "no_public_api",
+   "narrow_api",
+   "docs_gated",
+   "per_tenant_setup",
+   "other"
+  ]
+ },
+ "record": "each scored field = {value, evidence_url, quote, grounded}"
+}

@@ -1,0 +1,6 @@
+# 100-app agent-toolkit research
+
+Machine-readable: results.json (full records with evidence), results.csv, schema.json.
+Each scored field has value + evidence_url + verbatim quote. 'unknown' means not confirmed from sources.
+Summary: 92% self-serve; primary auth oauth2 (12 apps); 5 ready now; 0 blocked.
+Verification accuracy (gold set): pending.
