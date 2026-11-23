@@ -18,7 +18,7 @@ def _pass1(a):
     t = time.time()
     try:
         pages, _ = gather(a["app"], a["hint"])
-        rec = extract(a["app"], a["category"], pages)
+        rec = extract(a["app"], a["category"], pages, app_id=a["id"])
         rec["status"] = "ok"
     except Exception as e:
         rec = {"status": "error", "error": str(e)[:300]}
@@ -27,7 +27,7 @@ def _pass1(a):
 def pass2(r, max_rounds=2):
     if r.get("status") != "ok": return r
     for rnd in range(max_rounds):
-        flags = [f for f in critique(r["app"], r) if f["kind"] != "rule" or rnd == 0]
+        flags = [f for f in critique(r["app"], r, r["id"]) if f["kind"] != "rule" or rnd == 0]
         r.setdefault("critic_flags", []).append(flags)
         fixable = [f for f in flags if f["kind"] in ("unknown", "refetch", "judge", "adversarial")]
         if not fixable: break
@@ -36,7 +36,7 @@ def pass2(r, max_rounds=2):
             for u in f.get("extra_urls", [])[:2]:
                 if u not in r["sources"]: r["sources"].append(u); pages.append(scrape(u))
         pages = [p for p in pages if p["text"]]
-        new = extract(r["app"], r["category"], pages, note="; ".join(f"{f['field']}: {f['note']}" for f in fixable))
+        new = extract(r["app"], r["category"], pages, app_id=r["id"], note="; ".join(f"{f['field']}: {f['note']}" for f in fixable))
         for f in fixable:
             k = f["field"]
             if k in new and new[k] != r.get(k):
