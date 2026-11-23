@@ -8,6 +8,13 @@ from .critic import critique
 def load_apps(): return yaml.safe_load((ROOT/"data"/"apps.yaml").read_text())
 
 def pass1(a):
+    f = ROOT/"data"/"pass1"/f"{a['id']}.json"; f.parent.mkdir(exist_ok=True)
+    if f.exists(): return json.loads(f.read_text())
+    r = _pass1(a)
+    if r.get("status") == "ok": f.write_text(json.dumps(r))
+    return r
+
+def _pass1(a):
     t = time.time()
     try:
         pages, _ = gather(a["app"], a["hint"])
@@ -60,6 +67,7 @@ def main():
             res = list(ex.map(pass2, todo))
         else:
             res = list(ex.map(pass1, apps))
+    if not a.pass2: print("ok:", sum(r.get("status")=="ok" for r in res), "/", len(res))
     out.write_text("\n".join(json.dumps(r) for r in res)+"\n")
     for r in res: print(r["id"], r["app"], r.get("status"), (r.get("credential_access") or {}).get("value"), (r.get("buildability") or {}).get("value"))
 
