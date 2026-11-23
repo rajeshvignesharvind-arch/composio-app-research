@@ -63,3 +63,4 @@ retry 429 21.0
 retry 429 25.0
 retry 429 10.0
 retry 429 21.0
+retry 429 4.0
