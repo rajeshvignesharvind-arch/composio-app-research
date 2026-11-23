@@ -40,6 +40,8 @@ def build():
     S = {"stage1": [p1[i] for i in sorted(p1)], "stage2": [normalise(p2[i]) for i in sorted(p2)], "stage3": [stage3(p2[i]) for i in sorted(p2)]}
     gold = json.load(open(ROOT/"data"/"gold.json"))
     res = {k: score(v, gold) for k, v in S.items()}
+    g1 = json.load(open(ROOT/"data"/"gold_v1_frozen.json"))
+    for k, v in S.items(): res[k]["v1"] = score(v, g1)
     json.dump(S["stage3"], open(ROOT/"data"/"stage3.json", "w"))
     (ROOT/"data"/"final.jsonl").write_text("\n".join(json.dumps(r) for r in S["stage3"]) + "\n")
     return res

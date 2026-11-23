@@ -1,0 +1,403 @@
+[
+ {
+  "id": 1,
+  "app": "Salesforce",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/overview"
+  ],
+  "needs_human_confirm": false,
+  "note": "Free Developer Edition org"
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "sales_contact",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://api.docs.dealcloud.com/docs/token",
+   "https://api.docs.dealcloud.com/mcp/authentication"
+  ],
+  "needs_human_confirm": true,
+  "note": "Client credentials issued inside a licensed DealCloud site; no public signup"
+ },
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "auth_methods": [
+   "oauth2",
+   "basic"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_trial",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
+  ],
+  "needs_human_confirm": true,
+  "note": "30-day trial; MCP status needs human check"
+ },
+ {
+  "id": 20,
+  "app": "Gladly",
+  "auth_methods": [
+   "basic"
+  ],
+  "primary_auth": "basic",
+  "credential_access": "sales_contact",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "existing_mcp": "none_found",
+  "evidence": [
+   "https://developer.gladly.com/rest/"
+  ],
+  "needs_human_confirm": true,
+  "note": "API token created by a Gladly admin inside a paying customer org"
+ },
+ {
+  "id": 21,
+  "app": "Slack",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "websocket"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://docs.slack.dev/ai/mcp-server"
+  ],
+  "needs_human_confirm": false,
+  "note": "MCP only for Marketplace-published or internal apps"
+ },
+ {
+  "id": 25,
+  "app": "Pumble",
+  "auth_methods": [
+   "api_key"
+  ],
+  "primary_auth": "api_key",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://pumble.com/learn/pumble/ai-automation-guide/"
+  ],
+  "needs_human_confirm": false,
+  "note": "API addon on all plans; native MCP server"
+ },
+ {
+  "id": 31,
+  "app": "Google Ads",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "admin_approval",
+  "api_type": [
+   "rest",
+   "grpc"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
+  ],
+  "needs_human_confirm": true,
+  "note": "Developer token requires Google approval"
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "auth_methods": [
+   "api_key"
+  ],
+  "primary_auth": "api_key",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "existing_mcp": "none_found",
+  "evidence": [
+   "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io"
+  ],
+  "needs_human_confirm": true,
+  "note": "plan requirement for API key not confirmed"
+ },
+ {
+  "id": 41,
+  "app": "Shopify",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://shopify.dev/docs/api"
+  ],
+  "needs_human_confirm": false,
+  "note": "Free dev stores"
+ },
+ {
+  "id": 50,
+  "app": "fanbasis",
+  "auth_methods": [
+   "api_key"
+  ],
+  "primary_auth": "api_key",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "existing_mcp": "none_found",
+  "evidence": [
+   "https://commasdocs.com/",
+   "https://dev-docs.fanbasis.com/"
+  ],
+  "needs_human_confirm": true,
+  "note": "Official docs are password-gated; public mirror shows x-api-key"
+ },
+ {
+  "id": 53,
+  "app": "Ahrefs",
+  "auth_methods": [
+   "bearer_token"
+  ],
+  "primary_auth": "bearer_token",
+  "credential_access": "paid_plan",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://docs.ahrefs.com/en/api/docs/introduction",
+   "https://docs.ahrefs.com/en/mcp/docs/introduction"
+  ],
+  "needs_human_confirm": false,
+  "note": "API available on eligible paid plans"
+ },
+ {
+  "id": 54,
+  "app": "MrScraper",
+  "auth_methods": [
+   "api_key"
+  ],
+  "primary_auth": "api_key",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "existing_mcp": "none_found",
+  "evidence": [
+   "https://docs.mrscraper.com"
+  ],
+  "needs_human_confirm": true,
+  "note": "not yet checked live"
+ },
+ {
+  "id": 61,
+  "app": "GitHub",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token",
+   "basic"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest",
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://docs.github.com/rest"
+  ],
+  "needs_human_confirm": false,
+  "note": ""
+ },
+ {
+  "id": 66,
+  "app": "Neo4j",
+  "auth_methods": [
+   "oauth2",
+   "basic"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://neo4j.com/docs/aura/classic/platform/api/overview/"
+  ],
+  "needs_human_confirm": true,
+  "note": "Aura API mgmt only; DB itself is bolt/HTTP query API"
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "auth_methods": [
+   "oauth2",
+   "bearer_token"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://developers.notion.com"
+  ],
+  "needs_human_confirm": false,
+  "note": ""
+ },
+ {
+  "id": 73,
+  "app": "Linear",
+  "auth_methods": [
+   "oauth2",
+   "api_key"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "graphql"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://linear.app/developers"
+  ],
+  "needs_human_confirm": false,
+  "note": ""
+ },
+ {
+  "id": 81,
+  "app": "Stripe",
+  "auth_methods": [
+   "api_key",
+   "oauth2"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "self_serve_free",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://docs.stripe.com/mcp"
+  ],
+  "needs_human_confirm": false,
+  "note": "Test mode free; Connect OAuth for multi-tenant"
+ },
+ {
+  "id": 84,
+  "app": "Paygent Connect",
+  "auth_methods": [
+   "api_key"
+  ],
+  "primary_auth": "api_key",
+  "credential_access": "sales_contact",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "moderate",
+  "existing_mcp": "none_found",
+  "evidence": [
+   "https://docs.nmi.com/reference/nmi-gateway-features",
+   "https://support.nmi.com/hc/en-gb/articles/360002575497-Security-Keys-Private-and-Public-Keys"
+  ],
+  "needs_human_confirm": true,
+  "note": "Identity ambiguous (NMI-powered); security key from merchant account"
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "auth_methods": [
+   "api_key"
+  ],
+  "primary_auth": "api_key",
+  "credential_access": "sales_contact",
+  "api_type": [
+   "rest"
+  ],
+  "api_breadth": "narrow",
+  "existing_mcp": "official",
+  "evidence": [
+   "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+   "https://www.scalekit.com/blog/otter-mcp-vs-api"
+  ],
+  "needs_human_confirm": true,
+  "note": "Public REST API Enterprise-only; official MCP at mcp.otter.ai"
+ },
+ {
+  "id": 97,
+  "app": "higgsfield",
+  "auth_methods": [
+   "oauth2"
+  ],
+  "primary_auth": "oauth2",
+  "credential_access": "paid_plan",
+  "api_type": [
+   "cli_only"
+  ],
+  "api_breadth": "narrow",
+  "existing_mcp": "none_found",
+  "evidence": [
+   "https://higgsfield.ai/cli",
+   "https://higgsfield.ai/pricing"
+  ],
+  "needs_human_confirm": true,
+  "note": "CLI uses platform login and credits; API product at open.higgsfield.ai"
+ }
+]

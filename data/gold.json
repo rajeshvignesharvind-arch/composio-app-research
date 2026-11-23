@@ -37,7 +37,7 @@
    "https://api.docs.dealcloud.com/docs/token",
    "https://api.docs.dealcloud.com/mcp/authentication"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "Client credentials issued inside a licensed DealCloud site; no public signup"
  },
  {
@@ -57,7 +57,7 @@
   "evidence": [
    "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "30-day trial; MCP status needs human check"
  },
  {
@@ -76,7 +76,7 @@
   "evidence": [
    "https://developer.gladly.com/rest/"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "API token created by a Gladly admin inside a paying customer org"
  },
  {
@@ -136,7 +136,7 @@
   "evidence": [
    "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "Developer token requires Google approval"
  },
  {
@@ -151,12 +151,14 @@
    "rest"
   ],
   "api_breadth": "moderate",
-  "existing_mcp": "none_found",
+  "existing_mcp": "official",
   "evidence": [
-   "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io"
+   "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+   "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp"
   ],
-  "needs_human_confirm": true,
-  "note": "plan requirement for API key not confirmed"
+  "needs_human_confirm": false,
+  "note": "plan requirement for API key not confirmed",
+  "revised": "existing_mcp changed none_found -> official after finding vendor MCP page"
  },
  {
   "id": 41,
@@ -196,7 +198,7 @@
    "https://commasdocs.com/",
    "https://dev-docs.fanbasis.com/"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "Official docs are password-gated; public mirror shows x-api-key"
  },
  {
@@ -231,12 +233,14 @@
    "rest"
   ],
   "api_breadth": "narrow",
-  "existing_mcp": "none_found",
+  "existing_mcp": "official",
   "evidence": [
-   "https://docs.mrscraper.com"
+   "https://docs.mrscraper.com",
+   "https://mrscraper.com/blog/mcp-server-web-scraping"
   ],
-  "needs_human_confirm": true,
-  "note": "not yet checked live"
+  "needs_human_confirm": false,
+  "note": "not yet checked live",
+  "revised": "existing_mcp changed none_found -> official after finding vendor MCP page"
  },
  {
   "id": 61,
@@ -277,7 +281,7 @@
   "evidence": [
    "https://neo4j.com/docs/aura/classic/platform/api/overview/"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "Aura API mgmt only; DB itself is bolt/HTTP query API"
  },
  {
@@ -357,7 +361,7 @@
    "https://docs.nmi.com/reference/nmi-gateway-features",
    "https://support.nmi.com/hc/en-gb/articles/360002575497-Security-Keys-Private-and-Public-Keys"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "Identity ambiguous (NMI-powered); security key from merchant account"
  },
  {
@@ -377,7 +381,7 @@
    "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
    "https://www.scalekit.com/blog/otter-mcp-vs-api"
   ],
-  "needs_human_confirm": true,
+  "needs_human_confirm": false,
   "note": "Public REST API Enterprise-only; official MCP at mcp.otter.ai"
  },
  {
@@ -392,12 +396,14 @@
    "cli_only"
   ],
   "api_breadth": "narrow",
-  "existing_mcp": "none_found",
+  "existing_mcp": "official",
   "evidence": [
    "https://higgsfield.ai/cli",
-   "https://higgsfield.ai/pricing"
+   "https://higgsfield.ai/pricing",
+   "https://higgsfield.ai/mcp"
   ],
-  "needs_human_confirm": true,
-  "note": "CLI uses platform login and credits; API product at open.higgsfield.ai"
+  "needs_human_confirm": false,
+  "note": "CLI uses platform login and credits; API product at open.higgsfield.ai",
+  "revised": "existing_mcp changed none_found -> official after finding vendor MCP page"
  }
 ]

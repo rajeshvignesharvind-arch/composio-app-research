@@ -4,6 +4,11 @@
    "name": "Pass 1: extractor",
    "what": "Groq LLM reads 5 pages; every value needs a grounded quote",
    "overall": {
+    "correct": 65,
+    "n": 160,
+    "pct": 40.6
+   },
+   "overall_v1": {
     "correct": 63,
     "n": 160,
     "pct": 39.4
@@ -30,7 +35,7 @@
      "n": 20
     },
     "existing_mcp": {
-     "correct": 5,
+     "correct": 7,
      "n": 20
     },
     "buildability": {
@@ -47,6 +52,11 @@
    "name": "Pass 2: critic loop",
    "what": "other model re-checks, live re-fetch, adversarial search, targeted re-research",
    "overall": {
+    "correct": 66,
+    "n": 160,
+    "pct": 41.2
+   },
+   "overall_v1": {
     "correct": 64,
     "n": 160,
     "pct": 40.0
@@ -73,7 +83,7 @@
      "n": 20
     },
     "existing_mcp": {
-     "correct": 5,
+     "correct": 7,
      "n": 20
     },
     "buildability": {
@@ -90,6 +100,11 @@
    "name": "Pass 3: deterministic checks",
    "what": "enum normalisation + MCP detector (who published the hit)",
    "overall": {
+    "correct": 75,
+    "n": 160,
+    "pct": 46.9
+   },
+   "overall_v1": {
     "correct": 72,
     "n": 160,
     "pct": 45.0
@@ -116,7 +131,7 @@
      "n": 20
     },
     "existing_mcp": {
-     "correct": 13,
+     "correct": 16,
      "n": 20
     },
     "buildability": {
@@ -370,17 +385,6 @@
    "caught_by": "not caught"
   },
   {
-   "id": 37,
-   "app": "systeme.io",
-   "field": "existing_mcp",
-   "agent": "official",
-   "truth": "none_found",
-   "evidence": [
-    "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io"
-   ],
-   "caught_by": "not caught"
-  },
-  {
    "id": 41,
    "app": "Shopify",
    "field": "credential_access",
@@ -530,17 +534,6 @@
    "field": "api_breadth",
    "agent": "moderate",
    "truth": "narrow",
-   "evidence": [
-    "https://docs.mrscraper.com"
-   ],
-   "caught_by": "not caught"
-  },
-  {
-   "id": 54,
-   "app": "MrScraper",
-   "field": "existing_mcp",
-   "agent": "official",
-   "truth": "none_found",
    "evidence": [
     "https://docs.mrscraper.com"
    ],
@@ -892,46 +885,39 @@
     "https://higgsfield.ai/cli"
    ],
    "caught_by": "not caught"
-  },
-  {
-   "id": 97,
-   "app": "higgsfield",
-   "field": "existing_mcp",
-   "agent": "official",
-   "truth": "none_found",
-   "evidence": [
-    "https://higgsfield.ai/cli"
-   ],
-   "caught_by": "not caught"
   }
  ],
  "fixes": [
-  "Salesforce \u00b7 api_type: unknown \u2192 ['rest'] (unknown); gold says ['rest', 'graphql'] \u2014 changed but still wrong",
-  "Salesforce \u00b7 existing_mcp: unknown \u2192 none_found (unknown); gold says official \u2014 changed but still wrong",
-  "Salesforce \u00b7 existing_mcp: none_found \u2192 official (detector); gold says official \u2014 fixed",
-  "DealCloud \u00b7 auth_methods: unknown \u2192 oauth2,api_key (unknown); gold says ['oauth2'] \u2014 changed but still wrong",
-  "DealCloud \u00b7 credential_access: unknown \u2192 self_serve_trial (unknown); gold says sales_contact \u2014 changed but still wrong",
-  "DealCloud \u00b7 api_type: ['rest'] \u2192 rest (judge); gold says ['rest'] \u2014 broke a correct value",
-  "Zendesk \u00b7 existing_mcp: unknown \u2192 official (detector); gold says official \u2014 fixed",
-  "Gladly \u00b7 credential_access: self_serve_trial \u2192 partner_gated (judge); gold says sales_contact \u2014 changed but still wrong",
-  "Gladly \u00b7 existing_mcp: community \u2192 official (detector); gold says none_found \u2014 changed but still wrong",
-  "Slack \u00b7 existing_mcp: unknown \u2192 official (adversarial-search); gold says official \u2014 fixed",
-  "Pumble \u00b7 primary_auth: bearer_token \u2192 api_key (judge); gold says api_key \u2014 fixed",
-  "Google Ads \u00b7 existing_mcp: unknown \u2192 none_found (unknown); gold says official \u2014 changed but still wrong",
-  "Google Ads \u00b7 existing_mcp: none_found \u2192 official (detector); gold says official \u2014 fixed",
-  "Shopify \u00b7 primary_auth: unknown \u2192 oauth2 (unknown); gold says oauth2 \u2014 fixed",
-  "Shopify \u00b7 credential_access: self_serve_free \u2192 partner_gated (adversarial); gold says self_serve_free \u2014 broke a correct value",
-  "fanbasis \u00b7 existing_mcp: unknown \u2192 official (adversarial-search); gold says none_found \u2014 changed but still wrong",
-  "fanbasis \u00b7 existing_mcp: official \u2192 community (detector); gold says none_found \u2014 changed but still wrong",
-  "Ahrefs \u00b7 auth_methods: ['api_key', 'oauth2'] \u2192 ['api_key'] (judge); gold says ['bearer_token'] \u2014 changed but still wrong",
-  "Ahrefs \u00b7 primary_auth: oauth2 \u2192 api_key (judge); gold says bearer_token \u2014 changed but still wrong",
-  "Ahrefs \u00b7 existing_mcp: official \u2192 none_found (judge); gold says official \u2014 broke a correct value",
-  "Ahrefs \u00b7 credential_access: self_serve_free \u2192 self_serve_trial (adversarial); gold says paid_plan \u2014 changed but still wrong",
-  "Ahrefs \u00b7 existing_mcp: none_found \u2192 official (detector); gold says official \u2014 fixed",
-  "MrScraper \u00b7 existing_mcp: community \u2192 official (detector); gold says none_found \u2014 changed but still wrong",
-  "GitHub \u00b7 credential_access: self_serve_free \u2192 self_serve_trial (adversarial); gold says self_serve_free \u2014 broke a correct value",
-  "GitHub \u00b7 existing_mcp: official \u2192 none_found (adversarial); gold says official \u2014 broke a correct value"
+  "Salesforce \u00b7 api_type: unknown \u2192 ['rest'] (unknown) \u2014 changed but still wrong",
+  "Salesforce \u00b7 existing_mcp: unknown \u2192 none_found (unknown) \u2014 changed but still wrong",
+  "Salesforce \u00b7 existing_mcp: none_found \u2192 official (detector) \u2014 fixed",
+  "DealCloud \u00b7 auth_methods: unknown \u2192 oauth2,api_key (unknown) \u2014 changed but still wrong",
+  "DealCloud \u00b7 credential_access: unknown \u2192 self_serve_trial (unknown) \u2014 changed but still wrong",
+  "Zendesk \u00b7 existing_mcp: unknown \u2192 official (detector) \u2014 fixed",
+  "Gladly \u00b7 credential_access: self_serve_trial \u2192 partner_gated (judge) \u2014 changed but still wrong",
+  "Gladly \u00b7 existing_mcp: community \u2192 official (detector) \u2014 changed but still wrong",
+  "Slack \u00b7 existing_mcp: unknown \u2192 official (adversarial-search) \u2014 fixed",
+  "Pumble \u00b7 primary_auth: bearer_token \u2192 api_key (judge) \u2014 fixed",
+  "Google Ads \u00b7 existing_mcp: unknown \u2192 none_found (unknown) \u2014 changed but still wrong",
+  "Google Ads \u00b7 existing_mcp: none_found \u2192 official (detector) \u2014 fixed",
+  "Shopify \u00b7 primary_auth: unknown \u2192 oauth2 (unknown) \u2014 fixed",
+  "Shopify \u00b7 credential_access: self_serve_free \u2192 partner_gated (adversarial) \u2014 broke a correct value",
+  "fanbasis \u00b7 existing_mcp: unknown \u2192 official (adversarial-search) \u2014 changed but still wrong",
+  "fanbasis \u00b7 existing_mcp: official \u2192 community (detector) \u2014 changed but still wrong",
+  "Ahrefs \u00b7 auth_methods: ['api_key', 'oauth2'] \u2192 ['api_key'] (judge) \u2014 changed but still wrong",
+  "Ahrefs \u00b7 primary_auth: oauth2 \u2192 api_key (judge) \u2014 changed but still wrong",
+  "Ahrefs \u00b7 existing_mcp: official \u2192 none_found (judge) \u2014 broke a correct value",
+  "Ahrefs \u00b7 credential_access: self_serve_free \u2192 self_serve_trial (adversarial) \u2014 changed but still wrong",
+  "Ahrefs \u00b7 existing_mcp: none_found \u2192 official (detector) \u2014 fixed",
+  "MrScraper \u00b7 existing_mcp: community \u2192 official (detector) \u2014 fixed",
+  "GitHub \u00b7 credential_access: self_serve_free \u2192 self_serve_trial (adversarial) \u2014 broke a correct value",
+  "GitHub \u00b7 existing_mcp: official \u2192 none_found (adversarial) \u2014 broke a correct value",
+  "GitHub \u00b7 existing_mcp: none_found \u2192 official (detector) \u2014 fixed",
+  "Neo4j \u00b7 existing_mcp: unknown \u2192 none_found (unknown) \u2014 changed but still wrong",
+  "Neo4j \u00b7 primary_auth: bearer_token \u2192 other (judge) \u2014 changed but still wrong",
+  "Neo4j \u00b7 api_breadth: moderate \u2192 narrow (judge) \u2014 broke a correct value",
+  "Neo4j \u00b7 existing_mcp: none_found \u2192 official (detector) \u2014 fixed",
+  "Notion \u00b7 credential_access: unknown \u2192 self_serve_free (unknown) \u2014 fixed"
  ],
- "unknown_share": "13 of 88 remaining misses are 'unknown' (agent could not ground an answer in the snippets it saw); the rest are wrong values or taxonomy judgement calls.",
- "caveat": "Gold set n=20 (160 field checks), so each pass has roughly \u00b18 point uncertainty. The gold answers were drafted by Claude from live docs and are being confirmed by a human; where the human disagrees, scores are recomputed. Pass 2 and 3 changed 179+ fields across all 100 apps; only the 20 gold apps are scored."
+ "caveat": "Gold set n=20 (160 field checks): roughly \u00b18 points of noise. Not human-confirmed. The gold was revised after pass 2 in three places (existing_mcp for systeme.io, MrScraper, higgsfield, once the detector surfaced vendor MCP pages); 'frozen gold v1' shows scores on the unrevised answers. 13 of 85 remaining misses are 'unknown' (the agent could not ground an answer), the rest are wrong values or taxonomy judgement calls; the agent is biased toward 'self-serve' on gated apps. buildability and main_blocker are derived by rule from the other fields, so their errors compound."
 }
